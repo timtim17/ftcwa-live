@@ -1,16 +1,21 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 
-export class FtcwaLiveStack extends cdk.Stack {
+export class FTCWALiveStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'FtcwaLiveQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    // create Lambda
+    const rocketFn = new lambda.Function(this, 'RocketRouterFunction', {
+        code: lambda.Code.fromAsset('./lambda/target/lambda/ftcwa-live/'),
+        handler: '.',
+        runtime: lambda.Runtime.PROVIDED_AL2,
+        architecture: lambda.Architecture.ARM_64,
+    });
+    const rocketFnUrl = rocketFn.addFunctionUrl({
+        authType: lambda.FunctionUrlAuthType.NONE,
+    });
+    new cdk.CfnOutput(this, 'RocketFnUrl', { value: rocketFnUrl.url });
   }
 }
