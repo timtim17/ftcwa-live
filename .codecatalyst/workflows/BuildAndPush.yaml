@@ -39,9 +39,12 @@ Actions:
       Steps:
         - Run: cd lambda
         - Run: cargo lambda build -r --arm64 -F lambda
+      Container:
+        Registry: ECR
+        Image: public.ecr.aws/docker/library/rust:slim-buster
     Compute:
-      Type: Lambda
-      Fleet: Linux.Arm64.Large
+      Type: EC2
+      Fleet: Linux.x86-64.Large
   AWSCDKDeploy_aa:
     # Identifies the action. Do not modify this value.
     Identifier: aws/cdk-deploy@v1.0.13
