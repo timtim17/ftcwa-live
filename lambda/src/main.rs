@@ -16,7 +16,7 @@ fn brattain() -> Redirect {
 
 #[get("/<paths..>")]
 fn redirect(paths: PathBuf) -> Result<Redirect, Status> {
-    let path = paths.as_path().to_str().unwrap_or("(none)");
+    let path = paths.as_path().to_str().unwrap();
     let path_lower = path.to_lowercase();
     if path == path.to_lowercase() {
         Err(Status::NotFound)
