@@ -23,7 +23,7 @@ Actions:
         - WorkflowSource # This specifies that the action requires this Workflow as a source
     Outputs:
       Artifacts:
-        - Name: rocket_lamda
+        - Name: rocket_lambda
           Files:
             - lambda/target/lambda/ftcwa-live
         - Name: cdk
@@ -38,7 +38,7 @@ Actions:
       # Required - Steps are sequential instructions that run shell commands
       Steps:
         - Run: cd lambda
-        - Run: cargo lambda build -r --arm64 -F lambda
+        - Run: cargo lambda build -r --arm64
       Container:
         Registry: ECR
         Image: public.ecr.aws/docker/library/rust:slim-buster
@@ -56,7 +56,7 @@ Actions:
       Name: prod
     Inputs:
       Artifacts:
-        - rocket_lamda
+        - rocket_lambda
         - cdk
     Compute:
       Type: Lambda

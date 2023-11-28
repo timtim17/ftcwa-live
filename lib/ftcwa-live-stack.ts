@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
+import { RetentionDays } from 'aws-cdk-lib/aws-logs';
 
 export class FTCWALiveStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -12,6 +13,7 @@ export class FTCWALiveStack extends cdk.Stack {
         handler: '.',
         runtime: lambda.Runtime.PROVIDED_AL2,
         architecture: lambda.Architecture.ARM_64,
+        logRetention: RetentionDays.THREE_DAYS,
     });
     const rocketFnUrl = rocketFn.addFunctionUrl({
         authType: lambda.FunctionUrlAuthType.NONE,
