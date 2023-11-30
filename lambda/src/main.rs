@@ -1,30 +1,36 @@
 #[macro_use] extern crate rocket;
 
-use lambda_web::{launch_rocket_on_lambda, LambdaError};
+pub mod data;
+
+#[cfg(feature = "lambda")] use lambda_web::{launch_rocket_on_lambda, LambdaError};
 use rocket::{Build, Rocket, http::Status, response::Redirect};
-use std::path::PathBuf;
+
+use crate::data::STREAMS;
 
 #[get("/")]
 fn index() -> &'static str {
     "Hello, world!"
 }
 
-#[get("/brattain")]
-fn brattain() -> Redirect {
-    Redirect::temporary("https://www.youtube.com/watch?v=oD5AYrQbEsY")
-}
-
-#[get("/<paths..>")]
-fn redirect(paths: PathBuf) -> Result<Redirect, Status> {
-    let path = paths.as_path().to_str().unwrap();
+#[get("/<path>")]
+fn events(path: &str) -> Result<Redirect, Status> {
     let path_lower = path.to_lowercase();
-    if path == path.to_lowercase() {
-        Err(Status::NotFound)
-    } else {
-        Ok(Redirect::to(format!("/{}", path_lower)))
+    match STREAMS.get(path_lower.as_str()) {
+        None => Err(Status::NotFound),
+        Some(url) => {
+            let url: &'static str = (**url).as_ref();
+            Ok(Redirect::to(url))
+        },
     }
 }
 
+#[cfg(not(feature = "lambda"))]
+#[rocket::launch]
+fn rocket() -> Rocket<Build> {
+    build_rocket()
+}
+
+#[cfg(feature = "lambda")]
 #[rocket::main]
 async fn main() -> Result<(), LambdaError> {
     launch_rocket_on_lambda(build_rocket()).await?;
@@ -32,6 +38,6 @@ async fn main() -> Result<(), LambdaError> {
 }
 
 fn build_rocket() -> Rocket<Build> {
-    let rocket = rocket::build().mount("/", routes![index, redirect, brattain]);
+    let rocket = rocket::build().mount("/", routes![index, events]);
     rocket
 }

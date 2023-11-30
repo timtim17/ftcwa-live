@@ -38,7 +38,7 @@ Actions:
       # Required - Steps are sequential instructions that run shell commands
       Steps:
         - Run: cd lambda
-        - Run: cargo lambda build -r --arm64
+        - Run: cargo lambda build -r --arm64 -F lambda
       Container:
         Registry: ECR
         Image: public.ecr.aws/docker/library/rust:slim-buster
