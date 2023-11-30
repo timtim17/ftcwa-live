@@ -9,9 +9,7 @@ export class FTCWALiveStack extends cdk.Stack {
 
     // create Lambda
     const rocketFn = new lambda.Function(this, 'RocketRouterFunction', {
-        code: lambda.Code.fromDockerBuild('./lambda/', {
-            imagePath: '/lambda/target/lambda/ftcwa-live',
-        }),
+        code: lambda.Code.fromAsset('./lambda/target/lambda/ftcwa-live/'),
         handler: '.',
         runtime: lambda.Runtime.PROVIDED_AL2,
         architecture: lambda.Architecture.ARM_64,

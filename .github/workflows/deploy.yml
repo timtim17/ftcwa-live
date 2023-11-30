@@ -1,0 +1,77 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cargo-lambda/cargo-lambda
+    env:
+      CARGO_HOME: "/__w/ftcwa-live/ftcwa-live/.cargo"
+    steps:
+        - uses: actions/checkout@v4
+        - name: Cache dependencies
+          id: cache-rust
+          uses: actions/cache@v3
+          with:
+            path: |
+                lambda/target/
+                /__w/ftcwa-live/ftcwa-live/.cargo
+            key: cargo-${{ hashFiles('lambda/Cargo.lock') }}
+            restore-keys: cargo-
+        - name: Build
+          run: cargo lambda build -r --arm64 -F lambda
+          working-directory: ./lambda
+        - name: Upload build artifacts
+          uses: actions/upload-artifact@v3
+          with:
+            name: lambda
+            path: lambda/target/lambda/ftcwa-live
+        - name: Upload CDK config
+          uses: actions/upload-artifact@v3
+          with:
+            name: cdk
+            path: |
+              bin
+              lib
+              package*.json
+              cdk.json
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+    - name: "Download CDK config"
+      uses: actions/download-artifact@v3
+      with:
+        name: cdk
+    - name: "Download built Lambda"
+      uses: actions/download-artifact@v3
+      with:
+        name: lambda
+        path: lambda/target/lambda/ftcwa-live
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4.0.0
+      with:
+        node-version: lts/*
+        cache: "npm"
+    - name: Install dependencies
+      run: npm ci
+    - name: Configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v4.0.1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: 'us-west-2'
+    - name: Deploy cdk
+      run: npm run cdk deploy -- --require-approval never
