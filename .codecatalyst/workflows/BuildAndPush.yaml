@@ -40,8 +40,8 @@ Actions:
         - Run: cd lambda
         - Run: cargo lambda build -r --arm64 -F lambda
       Container:
-        Registry: ECR
-        Image: public.ecr.aws/docker/library/rust:slim-buster
+        Registry: Other
+        Image: ghcr.io/cargo-lambda/cargo-lambda:1.0.0
     Compute:
       Type: EC2
       Fleet: Linux.x86-64.Large
