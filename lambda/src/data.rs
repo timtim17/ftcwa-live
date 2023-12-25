@@ -8,4 +8,8 @@ pub const STREAMS: phf::Map<&'static str, &'static str> = phf_map! {
     "knuth" => "https://www.youtube.com/watch?v=10XjXGPzAyE",
     "spencer" => "https://www.youtube.com/watch?v=zHW5F4EthHU",
     "brattain" => "https://www.youtube.com/watch?v=pm6gNIm4dnU",
+    "feynman" => "https://youtube.com/live/2QSo1Zb2Xo4?feature=share",
+    "tesla" => "https://youtube.com/live/3ppW3ZNnmDA?feature=share",
+    "hawking" => "https://youtube.com/live/Me98sMD5KBs?feature=share",
+    "pasteur" => "https://youtube.com/live/pzwmqGg6mT4?feature=share"
 };
