@@ -1,0 +1,29 @@
+on:
+  pull_request:
+    branches:
+    - main
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cargo-lambda/cargo-lambda
+    env:
+      CARGO_HOME: "/__w/ftcwa-live/ftcwa-live/.cargo"
+    steps:
+        - uses: actions/checkout@v4
+        - name: Cache dependencies
+          id: cache-rust
+          uses: actions/cache@v3
+          with:
+            path: |
+                lambda/target/
+                /__w/ftcwa-live/ftcwa-live/.cargo
+            key: cargo-${{ hashFiles('lambda/Cargo.lock') }}
+            restore-keys: cargo-
+        - name: Build
+          run: cargo lambda build -r --arm64 -F lambda
+          working-directory: ./lambda
