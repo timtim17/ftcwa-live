@@ -12,5 +12,6 @@ pub const STREAMS: phf::Map<&'static str, &'static str> = phf_map! {
     "tesla" => "https://youtube.com/live/3ppW3ZNnmDA?",
     "hawking" => "https://youtube.com/live/Me98sMD5KBs",
     "pasteur" => "https://youtube.com/live/pzwmqGg6mT4",
-    "watt" => "https://youtube.com/live/UkmZnJgWUFA"
+    "watt" => "https://youtube.com/live/UkmZnJgWUFA",
+    "state" => "https://firstwa.org/"
 };
