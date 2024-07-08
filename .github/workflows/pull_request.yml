@@ -9,8 +9,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/cargo-lambda/cargo-lambda
     env:
       CARGO_HOME: "/__w/ftcwa-live/ftcwa-live/.cargo"
     steps:
@@ -24,6 +22,19 @@ jobs:
                 /__w/ftcwa-live/ftcwa-live/.cargo
             key: cargo-${{ hashFiles('lambda/Cargo.lock') }}
             restore-keys: cargo-
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v4.0.0
+          with:
+            node-version: lts/*
+            cache: "npm"
+        - name: Install dependencies
+          run: npm ci
+        - name: Configure aws credentials
+          uses: aws-actions/configure-aws-credentials@v4.0.1
+          with:
+              aws-access-key-id: ${{ secrets.AWS_READ_ONLY_ACCESS_KEY_ID }}
+              aws-secret-access-key: ${{ secrets.AWS_READ_ONLY_ACCESS_KEY_SECRET }}
+              aws-region: 'us-west-2'
         - name: Build
-          run: cargo lambda build -r --arm64 -F lambda
+          run: npm run cdk diff
           working-directory: ./lambda
