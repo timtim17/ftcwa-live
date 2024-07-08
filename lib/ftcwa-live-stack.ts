@@ -13,6 +13,12 @@ export class FTCWALiveStack extends cdk.Stack {
         manifestPath: './lambda',
         architecture: lambda.Architecture.ARM_64,
         logRetention: RetentionDays.THREE_DAYS,
+        bundling: {
+            cargoLambdaFlags: [
+                '-F',
+                'lambda',
+            ],
+        },
     });
     const rocketFnUrl = rocketFn.addFunctionUrl({
         authType: lambda.FunctionUrlAuthType.NONE,
