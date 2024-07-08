@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CARGO_HOME: "/__w/ftcwa-live/ftcwa-live/.cargo"
+      FORCE_COLOR: 1
     steps:
         - uses: actions/checkout@v4
         - name: Cache dependencies
