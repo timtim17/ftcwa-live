@@ -24,5 +24,7 @@ export class FTCWALiveStack extends cdk.Stack {
         authType: lambda.FunctionUrlAuthType.NONE,
     });
     new cdk.CfnOutput(this, 'RocketFnUrl', { value: rocketFnUrl.url });
+
+    this.tags.setTag('AppManagerCFNStackKey', this.stackId);
   }
 }
