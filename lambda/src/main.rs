@@ -54,3 +54,5 @@ fn build_rocket() -> Rocket<Build> {
     rocket::build()
         .mount("/", routes![index, events, events_specific_year])
 }
+
+#[cfg(test)] mod tests;

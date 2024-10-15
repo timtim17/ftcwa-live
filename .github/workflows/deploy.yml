@@ -16,19 +16,22 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     env:
-      CARGO_HOME: "/__w/ftcwa-live/ftcwa-live/.cargo"
       FORCE_COLOR: 1
     steps:
     - uses: actions/checkout@v4
     - name: Cache dependencies
-      id: cache-rust
       uses: actions/cache@v4
       with:
         path: |
-            lambda/target/
-            /__w/ftcwa-live/ftcwa-live/.cargo
-        key: cargo-${{ hashFiles('lambda/Cargo.lock') }}
-        restore-keys: cargo-
+          ~/.cargo/bin/
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+          target/
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+    - name: Run tests
+      run: cargo test
+      working-directory: ./lambda
     - name: Setup Node.js environment
       uses: actions/setup-node@v4.0.0
       with:
