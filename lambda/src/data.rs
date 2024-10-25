@@ -2,7 +2,7 @@ use phf::phf_map;
 use once_cell::sync::Lazy;
 
 pub static STREAMS: Lazy<&'static phf::Map<&'static str, &'static str>> = Lazy::new(|| {
-    ALL_STREAMS.get("2024").expect("invalid year")
+    ALL_STREAMS.get("2025").expect("invalid year")
 });
 
 pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static str>> = phf_map! {
@@ -28,5 +28,11 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "watt" => "https://youtube.com/live/UkmZnJgWUFA",
         "state" => "https://www.youtube.com/watch?v=xq-7jn_oMpU",
         "wyoming" => "https://youtube.com/live/-_atRRrqvxI",
+    },
+    "2025" => phf_map! {
+        "ritchie" => "https://youtube.com/live/Ph283fdDomo",
+        "ritchielm1" => "https://youtube.com/live/Ph283fdDomo",
+        "maxwell" => "https://youtube.com/live/IWESchJ58ZQ",
+        "maxwelllm1" => "https://youtube.com/live/IWESchJ58ZQ"
     },
 };
