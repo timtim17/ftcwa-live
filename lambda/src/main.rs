@@ -17,7 +17,7 @@ fn events_specific_year(year: &str, path: &str) -> Result<Redirect, Status> {
     let path_lower = path.to_lowercase();
     match ALL_STREAMS.get(year) {
         None => Err(Status::NotFound),
-        Some(_) => match STREAMS.get(path_lower.as_str()) {
+        Some(streams) => match streams.get(path_lower.as_str()) {
             None => Err(Status::NotFound),
             Some(&url) => {
                 Ok(Redirect::to(url))
