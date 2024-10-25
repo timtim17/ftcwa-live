@@ -32,7 +32,7 @@ fn router_routes_valid_events_for_old_years() {
     for &year in ALL_STREAMS.keys() {
         let streams = &ALL_STREAMS[year];
         for &event_key in streams.keys() {
-            let req = client.get(format!("/{}", event_key));
+            let req = client.get(format!("/{}/{}", year, event_key));
             let response = req.dispatch();
             assert_eq!(response.status(), Status::SeeOther);
             assert_eq!(response.headers().get_one("Location"), Some(streams[event_key]));
