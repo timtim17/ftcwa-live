@@ -30,9 +30,11 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "wyoming" => "https://youtube.com/live/-_atRRrqvxI",
     },
     "2025" => phf_map! {
-        "ritchie" => "https://youtube.com/live/Ph283fdDomo",
-        "ritchielm1" => "https://youtube.com/live/Ph283fdDomo",
+        "knuth" => "https://youtube.com/live/p7QltDkhMTY",
+        "knuthlm1" => "https://youtube.com/live/p7QltDkhMTY",
         "maxwell" => "https://youtube.com/live/IWESchJ58ZQ",
-        "maxwelllm1" => "https://youtube.com/live/IWESchJ58ZQ"
+        "maxwelllm1" => "https://youtube.com/live/IWESchJ58ZQ",
+        "ritchie" => "https://youtube.com/live/Ph283fdDomo",
+        "ritchielm1" => "https://youtube.com/live/Ph283fdDomo"
     },
 };
