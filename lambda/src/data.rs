@@ -32,8 +32,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
     "2025" => phf_map! {
         "knuth" => "https://youtube.com/live/p7QltDkhMTY",
         "knuthlm1" => "https://youtube.com/live/p7QltDkhMTY",
-        "maxwell" => "https://youtube.com/live/IWESchJ58ZQ",
-        "maxwelllm1" => "https://youtube.com/live/IWESchJ58ZQ",
+        "maxwell" => "https://youtube.com/live/KP2g5VyZMlg",
+        "maxwelllm1" => "https://youtube.com/live/KP2g5VyZMlg",
         "ritchie" => "https://youtube.com/live/Ph283fdDomo",
         "ritchielm1" => "https://youtube.com/live/Ph283fdDomo"
     },
