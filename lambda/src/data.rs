@@ -30,11 +30,17 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "wyoming" => "https://youtube.com/live/-_atRRrqvxI",
     },
     "2025" => phf_map! {
+        "bardeen" => "https://youtube.com/live/F0caNUelJS4",
+        "brattain" => "https://youtube.com/live/euo4xfI06_g"
         "knuth" => "https://youtube.com/live/p7QltDkhMTY",
-        "knuthlm1" => "https://www.youtube.com/watch?v=KP2g5VyZMlg",
+        "knuthlm1" => "https://youtube.com/watch?v=KP2g5VyZMlg",
+        "lamarr" => "https://youtube.com/live/B58rLrp_758?",
         "maxwell" => "https://youtube.com/live/KP2g5VyZMlg",
-        "maxwelllm1" => "https://www.youtube.com/watch?v=6jJjmvKK8FM",
+        "maxwelllm1" => "https://youtube.com/watch?v=6jJjmvKK8FM",
+        "noddack" => "https://youtube.com/live/_HL5ZwIVgvw",
         "ritchie" => "https://youtube.com/live/Ph283fdDomo",
-        "ritchielm1" => "https://www.youtube.com/watch?v=Ph283fdDomo"
+        "ritchielm1" => "https://youtube.com/watch?v=Ph283fdDomo",
+        "salk" => "https://youtube.com/live/4Pp_X0RtDBI",
+        "turing" => "https://youtube.com/live/_qqTK0YL8Z0",
     },
 };
