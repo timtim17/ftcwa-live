@@ -41,6 +41,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "ritchie" => "https://youtube.com/live/Ph283fdDomo",
         "ritchielm1" => "https://youtube.com/watch?v=Ph283fdDomo",
         "salk" => "https://youtube.com/live/4Pp_X0RtDBI",
+        "spencer" => "https://youtube.com/live/PwI7hqNdWVg",
         "turing" => "https://youtube.com/live/_qqTK0YL8Z0",
     },
 };
