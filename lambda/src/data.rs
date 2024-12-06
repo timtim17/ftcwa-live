@@ -50,6 +50,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "noddacklm1" => "https://www.youtube.com/watch?v=_HL5ZwIVgvw",
         "noddacklm2" => "https://youtube.com/live/ZxRBlrI4GrU?",
         "pasteur" => "https://youtube.com/live/5qkFrx-GZxY",
+        "pasteur-yt" => "https://youtube.com/live/5qkFrx-GZxY",
         "ritchie" => "https://youtube.com/live/jZ35QGR-OG0",
         "ritchielm1" => "https://www.youtube.com/watch?v=Ph283fdDomo",
         "ritchielm2" => "https://youtube.com/live/jZ35QGR-OG0",
