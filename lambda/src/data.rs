@@ -37,6 +37,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "brattainlm1" => "https://www.youtube.com/watch?v=euo4xfI06_g",
         "brattainlm2" => "https://www.youtube.com/live/MDpf4HXiNdc",
         "feynman" => "https://youtube.com/live/bh76PN2sC0c",
+        "feynman-yt" => "https://youtube.com/live/bh76PN2sC0c",
         "knuth" => "https://youtube.com/live/7N3Dam5n7HI",
         "knuthlm1" => "https://www.youtube.com/watch?v=KP2g5VyZMlg",
         "knuthlm2" => "https://www.youtube.com/watch?v=7N3Dam5n7HI",
