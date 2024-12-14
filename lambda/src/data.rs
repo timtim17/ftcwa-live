@@ -38,7 +38,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "brattainlm2" => "https://www.youtube.com/live/MDpf4HXiNdc",
         "feynman" => "https://youtube.com/live/bh76PN2sC0c",
         "feynman-yt" => "https://youtube.com/live/bh76PN2sC0c",
-        "hawking" => "https://youtube.com/live/4p14r6YbN8o",
+        "hawking" => "https://www.twitch.tv/firstwa_red1",
         "hawking-yt" => "https://youtube.com/live/4p14r6YbN8o",
         "knuth" => "https://youtube.com/live/7N3Dam5n7HI",
         "knuthlm1" => "https://www.youtube.com/watch?v=KP2g5VyZMlg",
@@ -66,7 +66,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "turing" => "https://youtube.com/live/AZWak1GDx4o",
         "turinglm1" => "https://www.youtube.com/watch?v=4Pp_X0RtDBI",
         "turinglm2" => "https://youtube.com/live/AZWak1GDx4o",
-        "wu" => "https://youtube.com/live/hE8VfHFS3lc",
+        "wu" => "https://www.twitch.tv/firstwa_red1",
         "wu-yt" => "https://youtube.com/live/hE8VfHFS3lc",
     },
 };
