@@ -65,6 +65,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "spencerlm2" => "https://youtube.com/live/8BBjhqQobeo",
         "tesla" => "https://youtube.com/live/2wFgknxFL2o",
         "tesla-yt" => "https://youtube.com/live/2wFgknxFL2o",
+        "tesla-rankings" => "https://youtube.com/live/28cmxegu55Q",
         "turing" => "https://youtube.com/live/AZWak1GDx4o",
         "turinglm1" => "https://www.youtube.com/watch?v=4Pp_X0RtDBI",
         "turinglm2" => "https://youtube.com/live/AZWak1GDx4o",
