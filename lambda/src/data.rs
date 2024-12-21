@@ -63,6 +63,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "spencer" => "https://youtube.com/live/8BBjhqQobeo",
         "spencerlm1" => "https://www.youtube.com/watch?v=PwI7hqNdWVg",
         "spencerlm2" => "https://youtube.com/live/8BBjhqQobeo",
+        "tesla" => "https://youtube.com/live/2wFgknxFL2o",
+        "tesla-yt" => "https://youtube.com/live/2wFgknxFL2o",
         "turing" => "https://youtube.com/live/AZWak1GDx4o",
         "turinglm1" => "https://www.youtube.com/watch?v=4Pp_X0RtDBI",
         "turinglm2" => "https://youtube.com/live/AZWak1GDx4o",
