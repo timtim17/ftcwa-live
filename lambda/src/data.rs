@@ -39,6 +39,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "coral-ytplaylist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUleDroiOiFaxPXGPPqZJ8Fvr",
         "feynman" => "https://youtube.com/live/bh76PN2sC0c",
         "feynman-yt" => "https://youtube.com/live/bh76PN2sC0c",
+        "hdti" => "https://www.youtube.com/watch?v=GntVMSsTzsA",
+        "hdti-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldsknJNSwmuNzUKiLRv3AyG",
         "hawking" => "https://www.twitch.tv/firstwa_red1",
         "hawking-yt" => "https://youtube.com/live/4p14r6YbN8o",
         "knuth" => "https://youtube.com/live/7N3Dam5n7HI",
