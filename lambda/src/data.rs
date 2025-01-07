@@ -84,22 +84,69 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
 };
 
 macro_rules! generate_links {
+    (@boilerplate) => {
+        "<!doctype html><style>
+                body {
+                    font-family: sans-serif;
+                    color: #14171a;
+                    margin: 60px auto;
+                    max-width: 95%;
+                }
+
+                a, a:link {
+                    color: #141414;
+                    line-height: 1.5;
+                    transition: color 500ms;
+                    text-decoration: none;
+                    border-bottom: 0.15em dotted;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    body {
+                        /* borrowed from whattheref.info,
+                         * which borrowed from vulpes.one's gemini proxy
+                         */
+                        color: #cad1d8;
+                        background-color: #14171a;
+                    }
+
+                    a, a:link {
+                        color: #eee;
+                    }
+                }
+
+                a:focus, a:hover {
+                    color: #F57E25;
+                }
+
+                h1 {
+                    margin: 0 0 8px;
+                }
+
+                @media screen and (min-width: 700px) {
+                    body {
+                        max-width: 650px;
+                    }
+                }
+            </style><body>"
+    };
+    (@links, $(($name:expr, $url:expr)),*) => {
+        concat!($(
+            concat!("<a href=\"", $url, "\">", $name, "</a><br>")
+        ),*)
+    };
     ($(($name:expr, $url:expr)),*) => {
         concat!(
-            "<!doctype html><body style=\"font-family: sans-serif;\">",
-            $(
-                concat!("<a href=\"", $url, "\" style=\"line-height: 1.5;\">", $name, "</a><br>")
-            ),*,
+            generate_links!(@boilerplate),
+            generate_links!(@links, $(($name, $url)),*),
             "</body>"
         )
     };
     ($title:expr, $(($name:expr, $url:expr)),*) => {
         concat!(
-            "<!doctype html><body style=\"font-family: sans-serif;\">",
-            "<h1 style=\"margin: 20px 0 8px;\">", $title, "</h1>",
-            $(
-                concat!("<a href=\"", $url, "\" style=\"line-height: 1.5;\">", $name, "</a><br>")
-            ),*,
+            generate_links!(@boilerplate),
+            "<h1>", $title, "</h1>",
+            generate_links!(@links, $(($name, $url)),*),
             "</body>"
         )
     };
