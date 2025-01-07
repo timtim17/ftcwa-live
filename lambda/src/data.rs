@@ -98,7 +98,7 @@ macro_rules! generate_links {
                     line-height: 1.5;
                     transition: color 500ms;
                     text-decoration: none;
-                    border-bottom: 0.15em dotted;
+                    border-bottom: 1px dotted;
                 }
 
                 @media (prefers-color-scheme: dark) {
