@@ -147,6 +147,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         "Asmiov Semifinal",
         ("YouTube", "/asimov"),
         ("Twitch", "/asimov-t"),
+        ("YouTube Playlist with Individual Matches", "/asimov-playlist"),
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ1"),
         ("Event Details", "https://firstwa.org/event/ftcasimov/")
     ),
@@ -154,6 +155,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         "Capek Semifinal",
         ("YouTube", "/capek"),
         ("Twitch", "/capek-t"),
+        ("YouTube Playlist with Individual Matches", "/capek-playlist"),
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ2"),
         ("Event Details", "https://firstwa.org/event/ftccapek/")
     ),
