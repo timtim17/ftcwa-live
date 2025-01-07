@@ -2,10 +2,11 @@
 
 pub mod data;
 
+use either::{Either, Left, Right};
 #[cfg(feature = "lambda")] use lambda_web::{launch_rocket_on_lambda, LambdaError};
-use rocket::{Build, Rocket, http::Status, response::Redirect};
+use rocket::{http::Status, response::{content::RawHtml, Redirect}, Build, Rocket};
 
-use crate::data::{ALL_STREAMS, STREAMS};
+use crate::data::{ALL_STREAMS, STREAMS, STATIC_PAGES};
 
 #[get("/")]
 fn index() -> &'static str {
@@ -13,27 +14,29 @@ fn index() -> &'static str {
 }
 
 #[get("/<year>/<path>")]
-fn events_specific_year(year: &str, path: &str) -> Result<Redirect, Status> {
+fn events_specific_year(year: &str, path: &str) -> Result<Either<RawHtml<&'static str>, Redirect>, Status> {
     let path_lower = path.to_lowercase();
     match ALL_STREAMS.get(year) {
-        None => Err(Status::NotFound),
+        None => match STATIC_PAGES.get(format!("{}/{}", year, path_lower).as_str()) {
+            None => Err(Status::NotFound),
+            Some(&content) => Ok(Left(RawHtml(content))),
+        },
         Some(streams) => match streams.get(path_lower.as_str()) {
             None => Err(Status::NotFound),
-            Some(&url) => {
-                Ok(Redirect::to(url))
-            },
+            Some(&url) => Ok(Right(Redirect::to(url))),
         },
     }
 }
 
 #[get("/<path>")]
-fn events(path: &str) -> Result<Redirect, Status> {
+fn events(path: &str) -> Result<Either<RawHtml<&'static str>, Redirect>, Status> {
     let path_lower = path.to_lowercase();
     match STREAMS.get(path_lower.as_str()) {
-        None => Err(Status::NotFound),
-        Some(&url) => {
-            Ok(Redirect::to(url))
+        None => match STATIC_PAGES.get(path_lower.as_str()) {
+            None => Err(Status::NotFound),
+            Some(&content) => Ok(Left(RawHtml(content))),
         },
+        Some(&url) => Ok(Right(Redirect::to(url))),
     }
 }
 

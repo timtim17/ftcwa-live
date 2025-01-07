@@ -82,3 +82,79 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "wu-yt" => "https://youtube.com/live/hE8VfHFS3lc",
     },
 };
+
+macro_rules! generate_links {
+    ($(($name:expr, $url:expr)),*) => {
+        concat!(
+            "<!doctype html><body style=\"font-family: sans-serif;\">",
+            $(
+                concat!("<a href=\"", $url, "\" style=\"line-height: 1.5;\">", $name, "</a><br>")
+            ),*,
+            "</body>"
+        )
+    };
+    ($title:expr, $(($name:expr, $url:expr)),*) => {
+        concat!(
+            "<!doctype html><body style=\"font-family: sans-serif;\">",
+            "<h1 style=\"margin: 20px 0 8px;\">", $title, "</h1>",
+            $(
+                concat!("<a href=\"", $url, "\" style=\"line-height: 1.5;\">", $name, "</a><br>")
+            ),*,
+            "</body>"
+        )
+    };
+}
+
+pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
+    "2024" => generate_links!(
+        ("Bardeen", "/2024/bardeen"),
+        ("Salk", "/2024/salk"),
+        ("Maxwell", "/2024/maxwell"),
+        ("Turing", "/2024/turing"),
+        ("Knuth", "/2024/knuth"),
+        ("Spencer", "/2024/spencer"),
+        ("Brattain", "/2024/brattain"),
+        ("Ritchie", "/2024/ritchie"),
+        ("Feynman", "/2024/feynman"),
+        ("Tesla", "/2024/tesla"),
+        ("Hawking", "/2024/hawking"),
+        ("Pasteur", "/2024/pasteur"),
+        ("Watt", "/2024/watt"),
+        ("State", "/2024/state"),
+        ("Wyoming", "/2024/wyoming")
+    ),
+    "2025" => generate_links!(
+        ("Asimov", "/2025/asimov"),
+        ("Bardeen", "/2025/bardeen"),
+        ("Brattain", "/2025/brattain"),
+        ("Capek", "/2025/capek"),
+        ("Feynman", "/2025/feynman"),
+        ("HDTI", "/2025/hdti"),
+        ("Hawking", "/2025/hawking"),
+        ("Knuth", "/2025/knuth"),
+        ("Lamarr", "/2025/lamarr"),
+        ("Maxwell", "/2025/maxwell"),
+        ("Noddack", "/2025/noddack"),
+        ("Pasteur", "/2025/pasteur"),
+        ("Ritchie", "/2025/ritchie"),
+        ("Salk", "/2025/salk"),
+        ("Spencer", "/2025/spencer"),
+        ("Tesla", "/2025/tesla"),
+        ("Turing", "/2025/turing"),
+        ("Wu", "/2025/wu")
+    ),
+    "semis/asimov" => generate_links!(
+        "Asmiov Semifinal",
+        ("YouTube", "/asimov"),
+        ("Twitch", "/asimov-t"),
+        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ1"),
+        ("Event Details", "https://firstwa.org/event/ftcasimov/")
+    ),
+    "semis/capek" => generate_links!(
+        "Capek Semifinal",
+        ("YouTube", "/capek"),
+        ("Twitch", "/capek-t"),
+        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ2"),
+        ("Event Details", "https://firstwa.org/event/ftccapek/")
+    ),
+};

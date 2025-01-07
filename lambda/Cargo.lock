@@ -305,6 +305,7 @@ dependencies = [
 name = "ftcwa-live"
 version = "0.1.0"
 dependencies = [
+ "either",
  "lambda-web",
  "once_cell",
  "phf",
