@@ -41,7 +41,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "brattainlm2" => "https://www.youtube.com/live/MDpf4HXiNdc",
         "capek" => "https://www.youtube.com/watch?v=xouJCgLDhf0",
         "capek-t" => "https://www.twitch.tv/firstwa_red1",
-        "capek-playlist" => "https://www.youtube.com/watch?v=xouJCgLDhf0&list=PLoRnKfyWNUlcUXUUZUjdmNjZyhjg_VQnI&pp=gAQB",
+        "capek-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcUXUUZUjdmNjZyhjg_VQnI",
         "coral-ytplaylist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUleDroiOiFaxPXGPPqZJ8Fvr",
         "feynman" => "https://youtube.com/live/bh76PN2sC0c",
         "feynman-yt" => "https://youtube.com/live/bh76PN2sC0c",
