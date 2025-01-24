@@ -42,6 +42,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "capek" => "https://www.youtube.com/watch?v=xouJCgLDhf0",
         "capek-t" => "https://www.twitch.tv/firstwa_red1",
         "capek-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcUXUUZUjdmNjZyhjg_VQnI",
+        "celtic" => "https://www.youtube.com/watch?v=Yb4IY3b8VuI",
+        "celtic-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfH1l2Zs9_DNgY3qHeIU4ul",
         "coral-ytplaylist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUleDroiOiFaxPXGPPqZJ8Fvr",
         "feynman" => "https://youtube.com/live/bh76PN2sC0c",
         "feynman-yt" => "https://youtube.com/live/bh76PN2sC0c",
@@ -206,4 +208,10 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ2"),
         ("Event Details", "https://firstwa.org/event/ftccapek/")
     ),
+    "iowa/celtic" => generate_links!(
+        "Iowa Celtic Sea League Tournament",
+        ("Celtic League Tournament - YouTube Stream", "/celtic"),
+        ("Celtic League Tournament YouTube Playlist with Individual Matches", "/celtic-playlist"),
+        ("Celtic League Tournament - FTC Iowa", "https://www.youtube.com/watch?v=IYCVKrod6ds")
+    )
 };
