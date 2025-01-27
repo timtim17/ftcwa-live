@@ -211,7 +211,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ2"),
         ("Event Details", "https://firstwa.org/event/ftccapek/")
     ),
-    "state" => generate_links!(
+    "wa/state" => generate_links!(
         "Washington Championship",
         ("YouTube", "/state"),
         ("Twitch", "/state-t"),
