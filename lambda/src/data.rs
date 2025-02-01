@@ -74,9 +74,9 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "spencer" => "https://youtube.com/live/8BBjhqQobeo",
         "spencerlm1" => "https://www.youtube.com/watch?v=PwI7hqNdWVg",
         "spencerlm2" => "https://youtube.com/live/8BBjhqQobeo",
-        "state" => "https://youtube.com/live/YyaL8DwY2kE",
+        "state-yt" => "https://youtube.com/live/YyaL8DwY2kE",
         "state-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfikcHBOPWZ0ff7NCxGksx0",
-        "state-t" => "https://www.twitch.tv/firstwa_red1",
+        "state" => "https://www.twitch.tv/firstwa_red1",
         "tesla" => "https://youtube.com/live/2wFgknxFL2o",
         "tesla-yt" => "https://youtube.com/live/2wFgknxFL2o",
         "tesla-rankings" => "https://youtube.com/live/28cmxegu55Q",
@@ -213,8 +213,8 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "wa/state" => generate_links!(
         "Washington Championship",
-        ("YouTube", "/state"),
-        ("Twitch", "/state-t"),
+        ("YouTube", "/state-yt"),
+        ("Twitch", "/state"),
         ("YouTube Playlist with Individual Matches", "/state-playlist"),
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWACMP"),
         ("Event Details", "https://firstwa.org/event/ftc-wachamps/")
