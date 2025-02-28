@@ -51,12 +51,12 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "hdti-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldsknJNSwmuNzUKiLRv3AyG",
         "hawking" => "https://www.twitch.tv/firstwa_red1",
         "hawking-yt" => "https://youtube.com/live/4p14r6YbN8o",
-        "iaBlack-fri" => "https://www.youtube.com/watch?v=JzlM84IoIBg",
-        "iaBlack-sat" => "https://www.youtube.com/watch?v=vBGyGGZR5NU",
-        "iaBlack-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldcH_NaPdqcH_bZoS8kLBy1",
-        "iaGold-fri" => "https://www.youtube.com/watch?v=f16mK4Gjr_M",
-        "iaGold-sat" => "https://www.youtube.com/watch?v=CKqRFk1nX2o",
-        "iaGold-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfLgKWo1HOnkuN0KzmORCxT",
+        "ia-black-fri" => "https://www.youtube.com/watch?v=JzlM84IoIBg",
+        "ia-black-sat" => "https://www.youtube.com/watch?v=vBGyGGZR5NU",
+        "ia-black-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldcH_NaPdqcH_bZoS8kLBy1",
+        "ia-gold-fri" => "https://www.youtube.com/watch?v=f16mK4Gjr_M",
+        "ia-gold-sat" => "https://www.youtube.com/watch?v=CKqRFk1nX2o",
+        "ia-gold-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfLgKWo1HOnkuN0KzmORCxT",
         "knuth" => "https://youtube.com/live/7N3Dam5n7HI",
         "knuthlm1" => "https://www.youtube.com/watch?v=KP2g5VyZMlg",
         "knuthlm2" => "https://www.youtube.com/watch?v=7N3Dam5n7HI",
@@ -233,11 +233,11 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "iowa/state" => generate_links!(
         "Iowa Championship",
-        ("Black Division - Friday", "/iaBlack-fri"),
-        ("Black Division - Saturday", "/iaBlack-sat"),
-        ("Black Division - Match Playlist", "/iaBlack-playlist"),
-        ("Gold Division - Friday", "/iaGold-fri"),
-        ("Gold Division - Saturday", "/iaGold-sat"),
-        ("Gold Division - Match Playlist", "/iaGold-playlist")
+        ("Black Division - Friday", "/ia-black-fri"),
+        ("Black Division - Saturday", "/ia-black-sat"),
+        ("Black Division - Match Playlist", "/ia-black-playlist"),
+        ("Gold Division - Friday", "/ia-gold-fri"),
+        ("Gold Division - Saturday", "/ia-gold-sat"),
+        ("Gold Division - Match Playlist", "/ia-gold-playlist")
     )
 };
