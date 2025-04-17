@@ -91,6 +91,10 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "turinglm2" => "https://youtube.com/live/AZWak1GDx4o",
         "wu" => "https://www.twitch.tv/firstwa_red1",
         "wu-yt" => "https://youtube.com/live/hE8VfHFS3lc",
+        "edison" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcuiB64Ybl7bG8newLU2KKs",
+        "franklin" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlf2aV6J8F1Oy7XdV65VzO2n",
+        "jemison" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcvcy1-BOwFUpcy_vGp2ihD",
+        "ochoa" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlctdFDJQR_IhFTenM5PjxuF"
     },
 };
 
