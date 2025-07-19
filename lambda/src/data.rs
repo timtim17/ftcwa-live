@@ -248,7 +248,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "cri" => generate_links!(
         "Chicago Robotics Invitational",
-        ("Official Stream", "/ia-black-fri"),
-        ("Official Match Playlist", "/ia-black-sat")
+        ("Official Stream", "/cri-stream"),
+        ("Official Match Playlist", "/cri-playlist")
     )
 };
