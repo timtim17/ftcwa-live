@@ -94,7 +94,9 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "edison" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcuiB64Ybl7bG8newLU2KKs",
         "franklin" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlf2aV6J8F1Oy7XdV65VzO2n",
         "jemison" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcvcy1-BOwFUpcy_vGp2ihD",
-        "ochoa" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlctdFDJQR_IhFTenM5PjxuF"
+        "ochoa" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlctdFDJQR_IhFTenM5PjxuF",
+        "cri" => "https://www.youtube.com/watch?v=-zaWigr8KFE&list=PLG-GBCx5_RF_CsV4-Egb7riZFWF6ZaOie&index=1&pp=iAQB",
+        "cri-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcnrYyst4KnrLRC2oyqZioe"
     },
 };
 
@@ -243,5 +245,10 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Gold Division - Friday", "/ia-gold-fri"),
         ("Gold Division - Saturday", "/ia-gold-sat"),
         ("Gold Division - Match Playlist", "/ia-gold-playlist")
+    ),
+    "cri" => generate_links!(
+        "Chicago Robotics Invitational",
+        ("Official Stream", "/ia-black-fri"),
+        ("Official Match Playlist", "/ia-black-sat")
     )
 };
