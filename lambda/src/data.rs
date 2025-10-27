@@ -217,7 +217,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Bardeen", "/2026/bardeen"),
         ("Noddack", "/2026/noddack"),
         ("Salk", "/2026/salk"),
-        ("Turing", "/2026/turing"),
+        ("Turing", "/2026/turing")
     ),
     "semis/asimov" => generate_links!(
         "Asmiov Semifinal",
