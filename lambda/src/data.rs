@@ -2,7 +2,7 @@ use phf::phf_map;
 use once_cell::sync::Lazy;
 
 pub static STREAMS: Lazy<&'static phf::Map<&'static str, &'static str>> = Lazy::new(|| {
-    ALL_STREAMS.get("2025").expect("invalid year")
+    ALL_STREAMS.get("2026").expect("invalid year")
 });
 
 pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static str>> = phf_map! {
