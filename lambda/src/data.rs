@@ -98,6 +98,12 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "cri-stream" => "https://www.youtube.com/watch?v=-zaWigr8KFE&list=PLG-GBCx5_RF_CsV4-Egb7riZFWF6ZaOie&index=1&pp=iAQB",
         "cri-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcnrYyst4KnrLRC2oyqZioe"
     },
+    "2026" => phf_map! {
+        "bardeen" => "https://youtube.com/live/3qVxio14lTs",
+        "noddack" => "https://youtube.com/live/UN1wMNuX9IU",
+        "salk" => "https://youtube.com/live/CdzKeENztQs",
+        "turing" => "https://youtube.com/live/Ixm2h2kHJSM",
+    },
 };
 
 macro_rules! generate_links {
@@ -206,6 +212,12 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Tesla", "/2025/tesla"),
         ("Turing", "/2025/turing"),
         ("Wu", "/2025/wu")
+    ),
+    "2026" => generate_links!(
+        ("Bardeen", "/2026/bardeen"),
+        ("Noddack", "/2026/noddack"),
+        ("Salk", "/2026/salk"),
+        ("Turing", "/2026/turing"),
     ),
     "semis/asimov" => generate_links!(
         "Asmiov Semifinal",
