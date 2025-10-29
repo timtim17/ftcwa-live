@@ -215,10 +215,15 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Wu", "/2025/wu")
     ),
     "2026" => generate_links!(
-        ("Bardeen", "/2026/bardeen"),
-        ("Noddack", "/2026/noddack"),
-        ("Salk", "/2026/salk"),
-        ("Turing", "/2026/turing")
+        "FTC Washington Decode Streams",
+        "League Meet 1",
+        "11/1",
+        ("Bardeen League Meet 1", "/2026/bardeen"),
+        ("Salk League Meet 1", "/2026/salk"),
+        "11/2",
+        ("Knuth League Meet 1", "/2026/knuth"),
+        ("Noddack League Meet 1", "/2026/noddack"),
+        ("Turing League Meet 1", "/2026/turing")
     ),
     "semis/asimov" => generate_links!(
         "Asmiov Semifinal",
