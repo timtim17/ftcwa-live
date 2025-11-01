@@ -99,7 +99,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "cri-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcnrYyst4KnrLRC2oyqZioe"
     },
     "2026" => phf_map! {
-        "bardeen" => "https://youtube.com/live/3qVxio14lTs",
+        "bardeen" => "https://www.youtube.com/watch?v=3mtZiUD4zzo",
         "noddack" => "https://youtube.com/live/UN1wMNuX9IU",
         "salk" => "https://youtube.com/live/CdzKeENztQs",
         "turing" => "https://youtube.com/live/Ixm2h2kHJSM",
