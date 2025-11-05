@@ -99,11 +99,17 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "cri-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcnrYyst4KnrLRC2oyqZioe"
     },
     "2026" => phf_map! {
+        //Weekend 1
         "bardeen" => "https://www.youtube.com/watch?v=3mtZiUD4zzo",
         "noddack" => "https://youtube.com/live/UN1wMNuX9IU",
         "salk" => "https://youtube.com/live/CdzKeENztQs",
         "turing" => "https://youtube.com/live/Ixm2h2kHJSM",
-        "knuth" => "https://youtube.com/live/Zk3hcROvo1g"
+        "knuth" => "https://youtube.com/live/Zk3hcROvo1g",
+        //Weekend 2
+        "lamarr" => "https://youtube.com/live/Ho9TGeFBlRE",
+        "spencer" => "https://youtube.com/live/J5FwcDN7Mhs",
+        "maxwell" => "https://youtube.com/live/i_PShdVsDe8",
+        "ritchie" => "https://youtube.com/live/tz-MMIJmUw8"
     },
 };
 
@@ -220,7 +226,11 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Salk League Meet 1", "/2026/salk"),
         ("Knuth League Meet 1", "/2026/knuth"),
         ("Noddack League Meet 1", "/2026/noddack"),
-        ("Turing League Meet 1", "/2026/turing")
+        ("Turing League Meet 1", "/2026/turing"),
+        ("Lamarr League Meet 1", "/2026/lamarr"),
+        ("Spencer League Meet 1", "/2026/spencer"),
+        ("Maxwell League Meet 1", "/2026/maxwell"),
+        ("Richie League Meet 1", "/2026/richie")
     ),
     "semis/asimov" => generate_links!(
         "Asmiov Semifinal",
