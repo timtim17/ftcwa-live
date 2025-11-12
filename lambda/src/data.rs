@@ -100,16 +100,21 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
     },
     "2026" => phf_map! {
         //Weekend 1
-        "bardeen" => "https://www.youtube.com/watch?v=3mtZiUD4zzo",
-        "noddack" => "https://youtube.com/live/UN1wMNuX9IU",
-        "salk" => "https://youtube.com/live/CdzKeENztQs",
-        "turing" => "https://youtube.com/live/Ixm2h2kHJSM",
-        "knuth" => "https://youtube.com/live/Zk3hcROvo1g",
+        "bardeen-lm1" => "https://www.youtube.com/watch?v=3mtZiUD4zzo",
+        "noddack-lm1" => "https://youtube.com/live/UN1wMNuX9IU",
+        "salk-lm1" => "https://youtube.com/live/CdzKeENztQs",
+        "turing-lm1" => "https://youtube.com/live/Ixm2h2kHJSM",
+        "knuth-lm1" => "https://youtube.com/live/Zk3hcROvo1g",
         //Weekend 2
-        "lamarr" => "https://youtube.com/live/Ho9TGeFBlRE",
-        "spencer" => "https://youtube.com/live/J5FwcDN7Mhs",
-        "maxwell" => "https://youtube.com/live/i_PShdVsDe8",
-        "ritchie" => "https://youtube.com/live/tz-MMIJmUw8"
+        "lamarr-lm1" => "https://youtube.com/live/Ho9TGeFBlRE",
+        "spencer-lm1" => "https://youtube.com/live/J5FwcDN7Mhs",
+        "maxwell-lm1" => "https://youtube.com/live/i_PShdVsDe8",
+        //"ritchie-lm1" => "https://youtube.com/live/tz-MMIJmUw8",
+        //Weekend 3
+        "bardeen" => "https://youtube.com/live/34eeydtEEmA",
+        "salk" => "https://youtube.com/live/iMan_bXS3NA",
+        "noddack" => "https://youtube.com/live/HZVQrcbPkzI",
+        "knuth" => "https://youtube.com/live/sbcvMd0L-_4"
     },
 };
 
@@ -222,15 +227,23 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "2026" => generate_links!(
         "FTC Washington Decode Streams",
-        ("Bardeen League Meet 1", "/2026/bardeen"),
-        ("Salk League Meet 1", "/2026/salk"),
-        ("Knuth League Meet 1", "/2026/knuth"),
-        ("Noddack League Meet 1", "/2026/noddack"),
-        ("Turing League Meet 1", "/2026/turing"),
-        ("Lamarr League Meet 1", "/2026/lamarr"),
-        ("Spencer League Meet 1", "/2026/spencer"),
-        ("Maxwell League Meet 1", "/2026/maxwell"),
-        ("Richie League Meet 1", "/2026/richie")
+        ("League Meet 1 VODS", "/2026/lm1"),
+        ("Bardeen League Meet 2", "/2026/bardeen"),
+        ("Salk League Meet 2", "/2026/salk"),
+        ("Knuth League Meet 2", "/2026/knuth"),
+        ("Noddack League Meet 2", "/2026/noddack")
+    ),
+    "2026/lm1" => generate_links!(
+        "FTC Washington Decode Streams- League Meet 1",
+        ("Bardeen League Meet 1", "/2026/bardeen-lm1"),
+        ("Salk League Meet 1", "/2026/salk-lm1"),
+        ("Knuth League Meet 1", "/2026/knuth-lm1"),
+        ("Noddack League Meet 1", "/2026/noddack-lm1"),
+        ("Turing League Meet 1", "/2026/turing-lm1"),
+        ("Lamarr League Meet 1", "/2026/lamarr-lm1"),
+        ("Spencer League Meet 1", "/2026/spencer-lm1"),
+        ("Maxwell League Meet 1", "/2026/maxwell-lm1"),
+        //("Richie League Meet 1", "/2026/richie-lm1")
     ),
     "semis/asimov" => generate_links!(
         "Asmiov Semifinal",
