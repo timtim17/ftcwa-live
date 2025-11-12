@@ -242,7 +242,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Turing League Meet 1", "/2026/turing-lm1"),
         ("Lamarr League Meet 1", "/2026/lamarr-lm1"),
         ("Spencer League Meet 1", "/2026/spencer-lm1"),
-        ("Maxwell League Meet 1", "/2026/maxwell-lm1"),
+        ("Maxwell League Meet 1", "/2026/maxwell-lm1")
         //("Richie League Meet 1", "/2026/richie-lm1")
     ),
     "semis/asimov" => generate_links!(
