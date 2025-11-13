@@ -227,13 +227,13 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "2026" => generate_links!(
         "FTC Washington Decode Streams",
-        ("League Meet 1 VODS", "/2026/lm1"),
+        ("League Meet 1 VODS", "/decode/lm1"),
         ("Bardeen League Meet 2", "/2026/bardeen"),
         ("Salk League Meet 2", "/2026/salk"),
         ("Knuth League Meet 2", "/2026/knuth"),
         ("Noddack League Meet 2", "/2026/noddack")
     ),
-    "2026/lm1" => generate_links!(
+    "decode/lm1" => generate_links!(
         "FTC Washington Decode Streams- League Meet 1",
         ("Bardeen League Meet 1", "/2026/bardeen-lm1"),
         ("Salk League Meet 1", "/2026/salk-lm1"),
