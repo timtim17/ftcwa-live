@@ -108,8 +108,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         //Weekend 2
         "lamarr-lm1" => "https://youtube.com/live/Ho9TGeFBlRE",
         "spencer-lm1" => "https://youtube.com/live/J5FwcDN7Mhs",
-        "maxwell-lm1" => "https://youtube.com/live/i_PShdVsDe8",
-        //"ritchie-lm1" => "https://youtube.com/live/tz-MMIJmUw8",
+        //"maxwell-lm1" => "https://youtube.com/live/i_PShdVsDe8",
+        "ritchie-lm1" => "https://youtube.com/live/tz-MMIJmUw8",
         //Weekend 3
         "bardeen" => "https://youtube.com/live/34eeydtEEmA",
         "salk" => "https://youtube.com/live/iMan_bXS3NA",
