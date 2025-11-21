@@ -114,7 +114,13 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "bardeen" => "https://youtube.com/live/34eeydtEEmA",
         "salk" => "https://youtube.com/live/iMan_bXS3NA",
         "noddack" => "https://youtube.com/live/HZVQrcbPkzI",
-        "knuth" => "https://youtube.com/live/sbcvMd0L-_4"
+        "knuth" => "https://youtube.com/live/sbcvMd0L-_4",
+        //Weekend 4
+        "lamarr" => "https://youtube.com/live/5pqmXWgNoeE",
+        "spencer" => "https://youtube.com/live/ZXHvLoKte-E",
+        "ritchie" => "https://youtube.com/live/EKT_-I5r3Oc",
+        "turing" => "https://youtube.com/live/nFcR4bpoDgY",
+        "brattain" => "https://youtube.com/live/A9Ub3_RHDSk"
     },
 };
 
@@ -231,7 +237,11 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Bardeen League Meet 2", "/2026/bardeen"),
         ("Salk League Meet 2", "/2026/salk"),
         ("Knuth League Meet 2", "/2026/knuth"),
-        ("Noddack League Meet 2", "/2026/noddack")
+        ("Lamarr League Meet 2", "/2026/lamarr"),
+        ("Spencer League Meet 2", "/2026/spencer"),
+        ("Ritchie League Meet 2", "/2026/ritchie"),
+        ("Turing League Meet 2", "/2026/turing"),
+        ("Brattain League Meet 2", "/2026/brattain")
     ),
     "decode/lm1" => generate_links!(
         "FTC Washington Decode Streams- League Meet 1",
