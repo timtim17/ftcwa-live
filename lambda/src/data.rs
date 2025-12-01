@@ -252,6 +252,15 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Super Qualifiers - Coming Soon", "/decode/sq"),
         ("Washington State Championship - Coming Soon", "/decode/state")
     ),
+    // Copy of "2026"
+    "decode" => generate_links!(
+        "FTC Washington Decode Streams",
+        ("League Meet 1 - Events Finished. Recording found here", "/decode/lm1"),
+        ("League Meet 2 - Events Finished. Recording found here", "/decode/lm2"),
+        ("League Tournaments - In Progress", "/decode/lt"),
+        ("Super Qualifiers - Coming Soon", "/decode/sq"),
+        ("Washington State Championship - Coming Soon", "/decode/state")
+    ),
     "decode/lm1" => generate_links!(
         "FTC Washington Decode Streams - League Meet 1",
         ("Bardeen League Meet 1", "/2026/bardeen-lm1"),
