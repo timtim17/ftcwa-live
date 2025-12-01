@@ -108,7 +108,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         //Weekend 2
         "lamarr-lm1" => "https://youtube.com/live/Ho9TGeFBlRE",
         "spencer-lm1" => "https://youtube.com/live/J5FwcDN7Mhs",
-        //"maxwell-lm1" => "https://youtube.com/live/i_PShdVsDe8",
+        "maxwell-lm1" => "https://www.youtube.com/watch?v=H8AD_ESdLRI",
         "ritchie-lm1" => "https://youtube.com/live/tz-MMIJmUw8",
         //Weekend 3
         "bardeen" => "https://youtube.com/live/34eeydtEEmA",
@@ -120,7 +120,20 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "spencer" => "https://youtube.com/live/ZXHvLoKte-E",
         "ritchie" => "https://youtube.com/live/EKT_-I5r3Oc",
         "turing" => "https://youtube.com/live/nFcR4bpoDgY",
-        "brattain" => "https://youtube.com/live/A9Ub3_RHDSk"
+        "brattain" => "https://youtube.com/live/A9Ub3_RHDSk",
+        //League Tournaments
+        "feynman" => "https://youtube.com/live/ZTbUW9LGbyE",
+        "pasteur" => "https://youtube.com/live/oU6qdVdSfoQ",
+        "wu" => "https://youtube.com/live/h6wvIfAQdYA",
+        "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
+        "hawking" => "https://youtube.com/live/ccOZhgE68YQ",
+        "watt" => "",
+        //Super Qualifiers
+        "asimov" => "https://youtube.com/live/c0wFbhRlusE",
+        "capek" => "https://youtube.com/live/uQlvwiwokMo",
+        //State
+        "state" => "https://youtube.com/live/nKypRFORACw"
+
     },
 };
 
@@ -173,7 +186,7 @@ macro_rules! generate_links {
     };
     (@links, $(($name:expr, $url:expr)),*) => {
         concat!($(
-            concat!("<a href=\"", $url, "\">", $name, "</a><br>")
+            concat!("<a style=\"color: green;\" href=\"", $url, "\">", $name, "</a><br>")
         ),*)
     };
     ($(($name:expr, $url:expr)),*) => {
@@ -233,18 +246,14 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "2026" => generate_links!(
         "FTC Washington Decode Streams",
-        ("League Meet 1 VODS", "/decode/lm1"),
-        ("Bardeen League Meet 2", "/2026/bardeen"),
-        ("Salk League Meet 2", "/2026/salk"),
-        ("Knuth League Meet 2", "/2026/knuth"),
-        ("Lamarr League Meet 2", "/2026/lamarr"),
-        ("Spencer League Meet 2", "/2026/spencer"),
-        ("Ritchie League Meet 2", "/2026/ritchie"),
-        ("Turing League Meet 2", "/2026/turing"),
-        ("Brattain League Meet 2", "/2026/brattain")
+        ("League Meet 1 - Events Finished. Recording found here", "/decode/lm1"),
+        ("League Meet 2 - Events Finished. Recording found here", "/decode/lm2"),
+        ("League Tournaments - In Progress", "/decode/lt"),
+        ("Super Qualifiers - Coming Soon", "/decode/sq"),
+        ("Washington State Championship - Coming Soon", "/decode/state")
     ),
     "decode/lm1" => generate_links!(
-        "FTC Washington Decode Streams- League Meet 1",
+        "FTC Washington Decode Streams - League Meet 1",
         ("Bardeen League Meet 1", "/2026/bardeen-lm1"),
         ("Salk League Meet 1", "/2026/salk-lm1"),
         ("Knuth League Meet 1", "/2026/knuth-lm1"),
@@ -252,8 +261,37 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Turing League Meet 1", "/2026/turing-lm1"),
         ("Lamarr League Meet 1", "/2026/lamarr-lm1"),
         ("Spencer League Meet 1", "/2026/spencer-lm1"),
-        //("Maxwell League Meet 1", "/2026/maxwell-lm1")
+        ("Maxwell League Meet 1", "/2026/maxwell-lm1"),
         ("Richie League Meet 1", "/2026/richie-lm1")
+    ),
+    "decode/lm2" => generate_links!(
+        "FTC Washington Decode Streams - League Meet 2",
+        ("Bardeen League Meet 2", "/2026/bardeen"),
+        ("Salk League Meet 2", "/2026/salk"),
+        ("Noddack League Meet 2", "/2026/noddack"),
+        ("Knuth League Meet 2", "/2026/knuth"),
+        ("Lamarr League Meet 2", "/2026/lamarr"),
+        ("Ritchie League Meet 2 - (NOTE: Broken due to venue errors)", "/2026/ritchie"),
+        ("Turing League Meet 2", "/2026/turing"),
+        ("Brattain League Meet 2", "/2026/brattain")
+    ),
+    "decode/lt" => generate_links!(
+        "FTC Washington Decode Streams - League Tournaments",
+        ("Feynman League Tournament", "/2026/feynman"),
+        ("Pasteur League Tournament", "/2026/pasteur"),
+        ("Wu League Tournament", "/2026/wu"),
+        ("Tesla League Tournament", "/2026/tesla"),
+        ("Hawking League Tournament", "/2026/hawking"),
+        ("Watt League Tournament (Pending Approvals)", "/2026/watt")
+    ),
+    "decode/sq" => generate_links!(
+        "FTC Washington Decode Streams - Super Qualifiers",
+        ("Asimov Super Qualifier (Saturday)", "/2026/asimov"),
+        ("Capek Super Qualifer (Sunday)", "/2026/capek")
+    ),
+    "decode/state" => generate_links!(
+        "FTC Washington Decode Streams - State Championship",
+        ("Washington State Championship (Stream)", "/2026/state")
     ),
     "semis/asimov" => generate_links!(
         "Asmiov Semifinal",
@@ -300,3 +338,4 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Official Match Playlist", "/cri-playlist")
     )
 };
+pub(crate) use generate_links; 

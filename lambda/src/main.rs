@@ -2,6 +2,8 @@
 
 pub mod data;
 
+use data::generate_links;
+
 use either::{Either, Left, Right};
 #[cfg(feature = "lambda")] use lambda_web::{launch_rocket_on_lambda, LambdaError};
 use rocket::{http::Status, response::{content::RawHtml, Redirect}, Build, Rocket};
@@ -9,8 +11,11 @@ use rocket::{http::Status, response::{content::RawHtml, Redirect}, Build, Rocket
 use crate::data::{ALL_STREAMS, STREAMS, STATIC_PAGES};
 
 #[get("/")]
-fn index() -> &'static str {
-    "Usage: https://ftcwa.live/<event name>"
+fn index() -> RawHtml<&'static str> {
+    RawHtml(concat!(
+        generate_links!(@boilerplate),
+        "<h1> Usage: https://ftcwa.live/(event name) </h1>"
+    ))
 }
 
 #[get("/<year>/<path>")]
