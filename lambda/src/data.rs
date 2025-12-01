@@ -127,7 +127,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "wu" => "https://youtube.com/live/h6wvIfAQdYA",
         "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
         "hawking" => "https://youtube.com/live/ccOZhgE68YQ",
-        "watt" => "",
+        //"watt" => "",
         //Super Qualifiers
         "asimov" => "https://youtube.com/live/c0wFbhRlusE",
         "capek" => "https://youtube.com/live/uQlvwiwokMo",
