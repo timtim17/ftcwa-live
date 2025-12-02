@@ -40,7 +40,6 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "brattainlm1" => "https://www.youtube.com/watch?v=euo4xfI06_g",
         "brattainlm2" => "https://www.youtube.com/live/MDpf4HXiNdc",
         "capek" => "https://www.youtube.com/watch?v=xouJCgLDhf0",
-        "capek-t" => "https://www.twitch.tv/firstwa_red1",
         "capek-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcUXUUZUjdmNjZyhjg_VQnI",
         "celtic" => "https://www.youtube.com/watch?v=Yb4IY3b8VuI",
         "celtic-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfH1l2Zs9_DNgY3qHeIU4ul",
@@ -80,9 +79,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "spencer" => "https://youtube.com/live/8BBjhqQobeo",
         "spencerlm1" => "https://www.youtube.com/watch?v=PwI7hqNdWVg",
         "spencerlm2" => "https://youtube.com/live/8BBjhqQobeo",
-        "state-yt" => "https://youtube.com/live/YyaL8DwY2kE",
+        "state" => "https://youtube.com/live/YyaL8DwY2kE",
         "state-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfikcHBOPWZ0ff7NCxGksx0",
-        "state" => "https://www.twitch.tv/firstwa_red1",
         "tesla" => "https://youtube.com/live/2wFgknxFL2o",
         "tesla-yt" => "https://youtube.com/live/2wFgknxFL2o",
         "tesla-rankings" => "https://youtube.com/live/28cmxegu55Q",
@@ -186,7 +184,7 @@ macro_rules! generate_links {
     };
     (@links, $(($name:expr, $url:expr)),*) => {
         concat!($(
-            concat!("<a style=\"color: green;\" href=\"", $url, "\">", $name, "</a><br>")
+            concat!("<a href=\"", $url, "\">", $name, "</a><br>")
         ),*)
     };
     ($(($name:expr, $url:expr)),*) => {
@@ -208,6 +206,7 @@ macro_rules! generate_links {
 
 pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     "2024" => generate_links!(
+        "Centerstage - 2023/24",
         ("Bardeen", "/2024/bardeen"),
         ("Salk", "/2024/salk"),
         ("Maxwell", "/2024/maxwell"),
@@ -221,16 +220,17 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Hawking", "/2024/hawking"),
         ("Pasteur", "/2024/pasteur"),
         ("Watt", "/2024/watt"),
-        ("State", "/2024/state"),
-        ("Wyoming", "/2024/wyoming")
+        ("Washington State Championship", "/2024/state"),
+        ("Wyoming State Championship", "/2024/wyoming")
     ),
     "2025" => generate_links!(
-        ("Asimov", "/2025/asimov"),
+        "Into The Deep - 2024/25",
+        ("Asimov", "/itd/semis/asimov"),
         ("Bardeen", "/2025/bardeen"),
         ("Brattain", "/2025/brattain"),
-        ("Capek", "/2025/capek"),
+        ("Capek", "/itd/semis/capek"),
         ("Feynman", "/2025/feynman"),
-        ("HDTI", "/2025/hdti"),
+        ("High Definition Tech Invitation (HDTI)", "/2025/hdti"),
         ("Hawking", "/2025/hawking"),
         ("Knuth", "/2025/knuth"),
         ("Lamarr", "/2025/lamarr"),
@@ -242,7 +242,9 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Spencer", "/2025/spencer"),
         ("Tesla", "/2025/tesla"),
         ("Turing", "/2025/turing"),
-        ("Wu", "/2025/wu")
+        ("Wu", "/2025/wu"),
+        ("Washington State Championship", "itd/wa/state"),
+        ("Chicago Robotics Invitiational", "itd/cri")
     ),
     "2026" => generate_links!(
         "FTC Washington Decode Streams",
@@ -302,37 +304,31 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         "FTC Washington Decode Streams - State Championship",
         ("Washington State Championship (Stream)", "/2026/state")
     ),
-    "semis/asimov" => generate_links!(
+    "itd/semis/asimov" => generate_links!(
         "Asmiov Semifinal",
-        ("YouTube", "/asimov"),
-        ("Twitch", "/asimov-t"),
-        ("YouTube Playlist with Individual Matches", "/asimov-playlist"),
-        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ1"),
-        ("Event Details", "https://firstwa.org/event/ftcasimov/")
+        ("YouTube", "/2025/asimov"),
+        ("YouTube Playlist with Individual Matches", "/2025/asimov-playlist"),
+        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ1")
     ),
-    "semis/capek" => generate_links!(
+    "itd/semis/capek" => generate_links!(
         "Capek Semifinal",
-        ("YouTube", "/capek"),
-        ("Twitch", "/capek-t"),
-        ("YouTube Playlist with Individual Matches", "/capek-playlist"),
-        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ2"),
-        ("Event Details", "https://firstwa.org/event/ftccapek/")
+        ("YouTube", "/2025/capek"),
+        ("YouTube Playlist with Individual Matches", "/2025/capek-playlist"),
+        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ2")
     ),
-    "wa/state" => generate_links!(
+    "itd/wa/state" => generate_links!(
         "Washington Championship",
-        ("YouTube", "/state-yt"),
-        ("Twitch", "/state"),
-        ("YouTube Playlist with Individual Matches", "/state-playlist"),
-        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWACMP"),
-        ("Event Details", "https://firstwa.org/event/ftc-wachamps/")
+        ("YouTube", "/2025/state"),
+        ("YouTube Playlist with Individual Matches", "/2025/state-playlist"),
+        ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWACMP")
     ),
-    "iowa/celtic" => generate_links!(
+    "itd/iowa/celtic" => generate_links!(
         "Iowa Celtic Sea League Tournament",
         ("Celtic League Tournament - YouTube Stream", "/celtic"),
         ("Celtic League Tournament YouTube Playlist with Individual Matches", "/celtic-playlist"),
         ("Celtic League Tournament - FTC Iowa", "https://www.youtube.com/watch?v=IYCVKrod6ds")
     ),
-    "iowa/state" => generate_links!(
+    "itd/iowa/state" => generate_links!(
         "Iowa Championship",
         ("Black Division - Friday", "/ia-black-fri"),
         ("Black Division - Saturday", "/ia-black-sat"),
@@ -341,7 +337,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Gold Division - Saturday", "/ia-gold-sat"),
         ("Gold Division - Match Playlist", "/ia-gold-playlist")
     ),
-    "cri" => generate_links!(
+    "itd/cri" => generate_links!(
         "Chicago Robotics Invitational",
         ("Official Stream", "/cri-stream"),
         ("Official Match Playlist", "/cri-playlist")

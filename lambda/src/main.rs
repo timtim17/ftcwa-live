@@ -14,7 +14,14 @@ use crate::data::{ALL_STREAMS, STREAMS, STATIC_PAGES};
 fn index() -> RawHtml<&'static str> {
     RawHtml(concat!(
         generate_links!(@boilerplate),
-        "<h1> Usage: https://ftcwa.live/(event name) </h1>"
+        "<h1> Welcome to the FTCWA.live project!</h1>",
+        "<h3> Generic Usage: https://ftcwa.live/(event name) </h3>",
+        "<h2> Current FTC (Decode) season:<a style=\"color:green;\" href=https://ftcwa.live/decode> Decode </a></h2>",
+        "<h2> Past FTC seasons:",
+        "<a href=https://ftcwa.live/2025> Into The Deep </a>",
+        " | ",
+        "<a href=https://ftcwa.live/2024> Centerstage </a>",
+        "</h2>"
     ))
 }
 
