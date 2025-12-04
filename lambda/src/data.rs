@@ -288,12 +288,12 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "decode/lt" => generate_links!(
         "FTC Washington Decode Streams - League Tournaments",
-        ("Feynman League Tournament", "/2026/feynman"),
-        ("Pasteur League Tournament", "/2026/pasteur"),
-        ("Wu League Tournament", "/2026/wu"),
-        ("Tesla League Tournament", "/2026/tesla"),
-        ("Hawking League Tournament", "/2026/hawking"),
-        ("Watt League Tournament (Pending Approvals)", "/2026/watt")
+        ("Feynman League Tournament (12/6)", "/2026/feynman"),
+        ("Pasteur League Tournament (12/7)", "/2026/pasteur"),
+        ("Wu League Tournament (12/13)", "/2026/wu"),
+        ("Tesla League Tournament (12/14)", "/2026/tesla"),
+        ("Hawking League Tournament (12/14)", "/2026/hawking"),
+        ("Watt League Tournament (Pending Approvals) (12/20)", "/2026/watt")
     ),
     "decode/sq" => generate_links!(
         "FTC Washington Decode Streams - Super Qualifiers",
