@@ -116,7 +116,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         //Weekend 4
         "lamarr" => "https://youtube.com/live/5pqmXWgNoeE",
         "spencer" => "https://youtube.com/live/ZXHvLoKte-E",
-        "ritchie" => "https://youtube.com/live/EKT_-I5r3Oc",
+        "ritchie" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcC7MLtZsgo8zmw3ibySugi",
         "turing" => "https://youtube.com/live/nFcR4bpoDgY",
         "brattain" => "https://youtube.com/live/A9Ub3_RHDSk",
         //League Tournaments
