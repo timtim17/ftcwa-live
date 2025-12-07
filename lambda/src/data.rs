@@ -121,7 +121,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "brattain" => "https://youtube.com/live/A9Ub3_RHDSk",
         //League Tournaments
         "feynman" => "https://youtube.com/live/ZTbUW9LGbyE",
-        "pasteur" => "https://youtube.com/live/oU6qdVdSfoQ",
+        "pasteur" => "https://youtube.com/live/G4AB_A9n1Ls",
         "wu" => "https://youtube.com/live/h6wvIfAQdYA",
         "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
         "hawking" => "https://youtube.com/live/ccOZhgE68YQ",
