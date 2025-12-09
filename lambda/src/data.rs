@@ -121,11 +121,13 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "brattain" => "https://youtube.com/live/A9Ub3_RHDSk",
         //League Tournaments
         "feynman" => "https://youtube.com/live/ZTbUW9LGbyE",
+        "feynman-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldy1dJOnpY0PkgZvi5bicWb",
         "pasteur" => "https://youtube.com/live/G4AB_A9n1Ls",
+        "pasteur-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcr5ChZIozJH0o2jDUnFZCX",
         "wu" => "https://youtube.com/live/h6wvIfAQdYA",
         "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
         "hawking" => "https://youtube.com/live/ccOZhgE68YQ",
-        //"watt" => "",
+        "watt" => "https://youtube.com/live/8lqLxOWAmvQ",
         //Super Qualifiers
         "asimov" => "https://youtube.com/live/c0wFbhRlusE",
         "capek" => "https://youtube.com/live/uQlvwiwokMo",
@@ -288,12 +290,14 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     ),
     "decode/lt" => generate_links!(
         "FTC Washington Decode Streams - League Tournaments",
-        ("Feynman League Tournament (12/6)", "/2026/feynman"),
-        ("Pasteur League Tournament (12/7)", "/2026/pasteur"),
-        ("Wu League Tournament (12/13)", "/2026/wu"),
-        ("Tesla League Tournament (12/14)", "/2026/tesla"),
-        ("Hawking League Tournament (12/14)", "/2026/hawking"),
-        ("Watt League Tournament (Pending Approvals) (12/20)", "/2026/watt")
+        ("Feynman League Tournament Stream (12/6)", "/2026/feynman"),
+        ("Feynman - Match Playlist", "/2026/feynman-playlist"),
+        ("Pasteur League Tournament Stream (12/7)", "/2026/pasteur"),
+        ("Pasteur - Match Playlist", "/2026/pasteur-playlist"),
+        ("Wu League Tournament Stream (12/13)", "/2026/wu"),
+        ("Tesla League Tournament Stream (12/14)", "/2026/tesla"),
+        ("Hawking League Tournament Stream (12/14)", "/2026/hawking"),
+        ("Watt League Tournament Stream (12/20)", "/2026/watt")
     ),
     "decode/sq" => generate_links!(
         "FTC Washington Decode Streams - Super Qualifiers",
