@@ -308,31 +308,54 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         "FTC Washington Decode Streams - State Championship",
         ("Washington State Championship (Stream)", "/2026/state")
     ),
-    "itd/semis/asimov" => generate_links!(
+    "itd" => generate_links!(
+        "Into The Deep - 2024/25",
+        ("Asimov", "/itd/semis/asimov"),
+        ("Bardeen", "/2025/bardeen"),
+        ("Brattain", "/2025/brattain"),
+        ("Capek", "/itd/semis/capek"),
+        ("Feynman", "/2025/feynman"),
+        ("High Definition Tech Invitation (HDTI)", "/2025/hdti"),
+        ("Hawking", "/2025/hawking"),
+        ("Knuth", "/2025/knuth"),
+        ("Lamarr", "/2025/lamarr"),
+        ("Maxwell", "/2025/maxwell"),
+        ("Noddack", "/2025/noddack"),
+        ("Pasteur", "/2025/pasteur"),
+        ("Ritchie", "/2025/ritchie"),
+        ("Salk", "/2025/salk"),
+        ("Spencer", "/2025/spencer"),
+        ("Tesla", "/2025/tesla"),
+        ("Turing", "/2025/turing"),
+        ("Wu", "/2025/wu"),
+        ("Washington State Championship", "itd/wa"),
+        ("Chicago Robotics Invitiational", "itd/cri")
+    ),
+    "itd/asimov" => generate_links!(
         "Asmiov Semifinal",
         ("YouTube", "/2025/asimov"),
         ("YouTube Playlist with Individual Matches", "/2025/asimov-playlist"),
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ1")
     ),
-    "itd/semis/capek" => generate_links!(
+    "itd/capek" => generate_links!(
         "Capek Semifinal",
         ("YouTube", "/2025/capek"),
         ("YouTube Playlist with Individual Matches", "/2025/capek-playlist"),
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWAMVSQ2")
     ),
-    "itd/wa/state" => generate_links!(
+    "itd/wa" => generate_links!(
         "Washington Championship",
         ("YouTube", "/2025/state"),
         ("YouTube Playlist with Individual Matches", "/2025/state-playlist"),
         ("FTC Events", "https://ftc-events.firstinspires.org/2024/USWACMP")
     ),
-    "itd/iowa/celtic" => generate_links!(
+    "itd/celtic" => generate_links!(
         "Iowa Celtic Sea League Tournament",
         ("Celtic League Tournament - YouTube Stream", "/celtic"),
         ("Celtic League Tournament YouTube Playlist with Individual Matches", "/celtic-playlist"),
         ("Celtic League Tournament - FTC Iowa", "https://www.youtube.com/watch?v=IYCVKrod6ds")
     ),
-    "itd/iowa/state" => generate_links!(
+    "itd/iowa" => generate_links!(
         "Iowa Championship",
         ("Black Division - Friday", "/ia-black-fri"),
         ("Black Division - Saturday", "/ia-black-sat"),
