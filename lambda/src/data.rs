@@ -125,6 +125,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "pasteur" => "https://youtube.com/live/G4AB_A9n1Ls",
         "pasteur-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcr5ChZIozJH0o2jDUnFZCX",
         "wu" => "https://youtube.com/live/h6wvIfAQdYA",
+        "wu-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldTWZN1JY-eFgWdUzhLP-mP",
         "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
         "hawking" => "https://youtube.com/live/ypZQyM435qE",
         "watt" => "https://youtube.com/live/8lqLxOWAmvQ",
@@ -295,6 +296,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Pasteur League Tournament Stream (12/7)", "/2026/pasteur"),
         ("Pasteur - Match Playlist", "/2026/pasteur-playlist"),
         ("Wu League Tournament Stream (12/13)", "/2026/wu"),
+        ("Wu - Match Playlist", "2026/wu-playlist"),
         ("Tesla League Tournament Stream (12/14)", "/2026/tesla"),
         ("Hawking League Tournament Stream (12/14)", "/2026/hawking"),
         ("Watt League Tournament Stream (12/20)", "/2026/watt")
