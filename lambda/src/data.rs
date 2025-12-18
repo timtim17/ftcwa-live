@@ -127,7 +127,9 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "wu" => "https://youtube.com/live/h6wvIfAQdYA",
         "wu-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldTWZN1JY-eFgWdUzhLP-mP",
         "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
+        "tesla-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfJY0O2uVBTrOaZpv7gdzqk",
         "hawking" => "https://youtube.com/live/ypZQyM435qE",
+        "hawking-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcKmhJUSjLWUUdGA3AwqXEe",
         "watt" => "https://youtube.com/live/8lqLxOWAmvQ",
         //Super Qualifiers
         "asimov" => "https://youtube.com/live/c0wFbhRlusE",
@@ -298,7 +300,9 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Wu League Tournament Stream (12/13)", "/2026/wu"),
         ("Wu - Match Playlist", "2026/wu-playlist"),
         ("Tesla League Tournament Stream (12/14)", "/2026/tesla"),
+        ("Tesla - Match Playlist", "2026/tesla-playlist"),
         ("Hawking League Tournament Stream (12/14)", "/2026/hawking"),
+        ("Hawking - Match Playlist", "2026/hawking-playlist"),
         ("Watt League Tournament Stream (12/20)", "/2026/watt")
     ),
     "decode/sq" => generate_links!(
