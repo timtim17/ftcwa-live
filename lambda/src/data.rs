@@ -135,7 +135,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "asimov" => "https://youtube.com/live/c0wFbhRlusE",
         "capek" => "https://youtube.com/live/uQlvwiwokMo",
         //State
-        "state" => "https://youtube.com/live/nKypRFORACw"
+        "state" => "https://youtube.com/live/nKypRFORACw",
+        "fll" => "https://youtube.com/live/rBvjxLnDriw"
 
     },
 };
