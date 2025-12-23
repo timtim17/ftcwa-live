@@ -131,6 +131,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "hawking" => "https://youtube.com/live/ypZQyM435qE",
         "hawking-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcKmhJUSjLWUUdGA3AwqXEe",
         "watt" => "https://youtube.com/live/8lqLxOWAmvQ",
+        "watt-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUle5hcH47CXE1ELo-ICL6sWJ",
         //Super Qualifiers
         "asimov" => "https://youtube.com/live/c0wFbhRlusE",
         "capek" => "https://youtube.com/live/uQlvwiwokMo",
@@ -304,7 +305,8 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Tesla - Match Playlist", "2026/tesla-playlist"),
         ("Hawking League Tournament Stream (12/14)", "/2026/hawking"),
         ("Hawking - Match Playlist", "2026/hawking-playlist"),
-        ("Watt League Tournament Stream (12/20)", "/2026/watt")
+        ("Watt League Tournament Stream (12/20)", "/2026/watt"),
+        ("Watt - Match Playlist", "2026/watt-playlist")
     ),
     "decode/sq" => generate_links!(
         "FTC Washington Decode Streams - Super Qualifiers",
