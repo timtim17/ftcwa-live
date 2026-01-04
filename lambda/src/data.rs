@@ -137,7 +137,9 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "capek" => "https://youtube.com/live/uQlvwiwokMo",
         //State
         "state" => "https://youtube.com/live/nKypRFORACw",
-        "fll" => "https://youtube.com/live/rBvjxLnDriw"
+        "fll" => "https://youtube.com/live/rBvjxLnDriw",
+        //Offseasons
+        "wti" => "https://youtube.com/live/WEQIpW0cqko"
 
     },
 };
