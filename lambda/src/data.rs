@@ -147,7 +147,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
 
 macro_rules! generate_links {
     (@boilerplate) => {
-        "<!doctype html><style>
+        "<!doctype html><html lang='en'><head><meta charset='utf-8'><style>
                 body {
                     font-family: sans-serif;
                     color: #14171a;
@@ -190,7 +190,7 @@ macro_rules! generate_links {
                         max-width: 650px;
                     }
                 }
-            </style><body>"
+            </style></head><body>"
     };
     (@links, $(($name:expr, $url:expr)),*) => {
         concat!($(
@@ -201,7 +201,7 @@ macro_rules! generate_links {
         concat!(
             generate_links!(@boilerplate),
             generate_links!(@links, $(($name, $url)),*),
-            "</body>"
+            "</body></html>"
         )
     };
     ($title:expr, $(($name:expr, $url:expr)),*) => {
@@ -209,7 +209,7 @@ macro_rules! generate_links {
             generate_links!(@boilerplate),
             "<h1>", $title, "</h1>",
             generate_links!(@links, $(($name, $url)),*),
-            "</body>"
+            "</body></html>"
         )
     };
 }
@@ -382,4 +382,4 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Official Match Playlist", "/cri-playlist")
     )
 };
-pub(crate) use generate_links; 
+pub(crate) use generate_links;
