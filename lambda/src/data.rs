@@ -142,7 +142,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "wti" => "https://youtube.com/live/WEQIpW0cqko",
         "hdi" => "https://youtube.com/live/mft5SflznDA",
 
-        "cmp" => "https://www.firstinspires.org/programs/first-championship/watch",
+        "cmp" => "https://www.firstinspires.org/programs/first-championship/watch#:~:text=FIRST%C2%AE%20Tech%20Challenge",
     },
 };
 
