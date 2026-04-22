@@ -140,8 +140,9 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "fll" => "https://youtube.com/live/rBvjxLnDriw",
         //Offseasons
         "wti" => "https://youtube.com/live/WEQIpW0cqko",
-        "hdi" => "https://youtube.com/live/mft5SflznDA"
+        "hdi" => "https://youtube.com/live/mft5SflznDA",
 
+        "cmp" => "https://www.firstinspires.org/programs/first-championship/watch",
     },
 };
 
