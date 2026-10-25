@@ -2,32 +2,62 @@ use phf::phf_map;
 use once_cell::sync::Lazy;
 
 pub static STREAMS: Lazy<&'static phf::Map<&'static str, &'static str>> = Lazy::new(|| {
-    ALL_STREAMS.get("2026").expect("invalid year")
+    ALL_STREAMS.get("2027").expect("invalid year")
 });
 
 pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static str>> = phf_map! {
-    "2024" => phf_map! {
-        "bardeen" => "https://www.youtube.com/watch?v=AfZ_z4BQZuk",
-        "bardeen1" => "https://www.youtube.com/watch?v=W7ZDLTJKp5c",
-        "salk" => "https://www.youtube.com/watch?v=yPoC3pbuk9o",
-        "salk1" => "https://www.youtube.com/watch?v=yyXZ8Q5Va2E",
-        "maxwell" => "https://www.youtube.com/watch?v=aj2QMS5zFaM",
-        "maxwell1" => "https://www.youtube.com/watch?v=EnBG9x9p658",
-        "turing" => "https://www.youtube.com/watch?v=HAAQTXrOZw4",
-        "turing1" => "https://www.youtube.com/watch?v=U85i6WwwAJA",
-        "knuth" => "https://www.youtube.com/watch?v=10XjXGPzAyE",
-        "spencer" => "https://www.youtube.com/watch?v=zHW5F4EthHU",
-        "spencer1" => "https://www.youtube.com/watch?v=oLkX1fAEXF4",
-        "brattain" => "https://www.youtube.com/watch?v=pm6gNIm4dnU",
-        "brattain1" => "https://www.youtube.com/watch?v=dFUwrtv--G4",
-        "ritchie1" => "https://www.youtube.com/watch?v=LSgT-zcOUyo",
-        "feynman" => "https://youtube.com/live/2QSo1Zb2Xo4",
-        "tesla" => "https://youtube.com/live/3ppW3ZNnmDA?",
-        "hawking" => "https://youtube.com/live/Me98sMD5KBs",
-        "pasteur" => "https://youtube.com/live/pzwmqGg6mT4",
-        "watt" => "https://youtube.com/live/UkmZnJgWUFA",
-        "state" => "https://www.youtube.com/watch?v=xq-7jn_oMpU",
-        "wyoming" => "https://youtube.com/live/-_atRRrqvxI",
+    "2027" => phf_map! {
+        // Week 1
+        "ritchie-lm1" => "https://www.youtube.com/live/DH8gT_3iDLo",
+        "ritchie" => "https://www.youtube.com/live/DH8gT_3iDLo",
+    },
+    "2026" => phf_map! {
+        //Weekend 1
+        "bardeen-lm1" => "https://www.youtube.com/watch?v=3mtZiUD4zzo",
+        "noddack-lm1" => "https://youtube.com/live/UN1wMNuX9IU",
+        "salk-lm1" => "https://youtube.com/live/CdzKeENztQs",
+        "turing-lm1" => "https://youtube.com/live/Ixm2h2kHJSM",
+        "knuth-lm1" => "https://youtube.com/live/Zk3hcROvo1g",
+        //Weekend 2
+        "lamarr-lm1" => "https://youtube.com/live/Ho9TGeFBlRE",
+        "spencer-lm1" => "https://youtube.com/live/J5FwcDN7Mhs",
+        "maxwell-lm1" => "https://www.youtube.com/watch?v=H8AD_ESdLRI",
+        "ritchie-lm1" => "https://youtube.com/live/tz-MMIJmUw8",
+        //Weekend 3
+        "bardeen" => "https://youtube.com/live/34eeydtEEmA",
+        "salk" => "https://youtube.com/live/iMan_bXS3NA",
+        "noddack" => "https://youtube.com/live/HZVQrcbPkzI",
+        "knuth" => "https://youtube.com/live/sbcvMd0L-_4",
+        //Weekend 4
+        "lamarr" => "https://youtube.com/live/5pqmXWgNoeE",
+        "spencer" => "https://youtube.com/live/ZXHvLoKte-E",
+        "ritchie" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcC7MLtZsgo8zmw3ibySugi",
+        "turing" => "https://youtube.com/live/nFcR4bpoDgY",
+        "brattain" => "https://youtube.com/live/A9Ub3_RHDSk",
+        //League Tournaments
+        "feynman" => "https://youtube.com/live/ZTbUW9LGbyE",
+        "feynman-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldy1dJOnpY0PkgZvi5bicWb",
+        "pasteur" => "https://youtube.com/live/G4AB_A9n1Ls",
+        "pasteur-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcr5ChZIozJH0o2jDUnFZCX",
+        "wu" => "https://youtube.com/live/h6wvIfAQdYA",
+        "wu-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldTWZN1JY-eFgWdUzhLP-mP",
+        "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
+        "tesla-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfJY0O2uVBTrOaZpv7gdzqk",
+        "hawking" => "https://youtube.com/live/ypZQyM435qE",
+        "hawking-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcKmhJUSjLWUUdGA3AwqXEe",
+        "watt" => "https://youtube.com/live/8lqLxOWAmvQ",
+        "watt-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUle5hcH47CXE1ELo-ICL6sWJ",
+        //Super Qualifiers
+        "asimov" => "https://youtube.com/live/c0wFbhRlusE",
+        "capek" => "https://youtube.com/live/uQlvwiwokMo",
+        //State
+        "state" => "https://youtube.com/live/nKypRFORACw",
+        "fll" => "https://youtube.com/live/rBvjxLnDriw",
+        //Offseasons
+        "wti" => "https://youtube.com/live/WEQIpW0cqko",
+        "hdi" => "https://youtube.com/live/mft5SflznDA",
+
+        "cmp" => "https://www.firstinspires.org/programs/first-championship/watch#:~:text=FIRST%C2%AE%20Tech%20Challenge",
     },
     "2025" => phf_map! {
         "asimov" => "https://www.youtube.com/watch?v=bk6L7yV46k0",
@@ -96,53 +126,28 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "cri-stream" => "https://www.youtube.com/watch?v=-zaWigr8KFE&list=PLG-GBCx5_RF_CsV4-Egb7riZFWF6ZaOie&index=1&pp=iAQB",
         "cri-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcnrYyst4KnrLRC2oyqZioe"
     },
-    "2026" => phf_map! {
-        //Weekend 1
-        "bardeen-lm1" => "https://www.youtube.com/watch?v=3mtZiUD4zzo",
-        "noddack-lm1" => "https://youtube.com/live/UN1wMNuX9IU",
-        "salk-lm1" => "https://youtube.com/live/CdzKeENztQs",
-        "turing-lm1" => "https://youtube.com/live/Ixm2h2kHJSM",
-        "knuth-lm1" => "https://youtube.com/live/Zk3hcROvo1g",
-        //Weekend 2
-        "lamarr-lm1" => "https://youtube.com/live/Ho9TGeFBlRE",
-        "spencer-lm1" => "https://youtube.com/live/J5FwcDN7Mhs",
-        "maxwell-lm1" => "https://www.youtube.com/watch?v=H8AD_ESdLRI",
-        "ritchie-lm1" => "https://youtube.com/live/tz-MMIJmUw8",
-        //Weekend 3
-        "bardeen" => "https://youtube.com/live/34eeydtEEmA",
-        "salk" => "https://youtube.com/live/iMan_bXS3NA",
-        "noddack" => "https://youtube.com/live/HZVQrcbPkzI",
-        "knuth" => "https://youtube.com/live/sbcvMd0L-_4",
-        //Weekend 4
-        "lamarr" => "https://youtube.com/live/5pqmXWgNoeE",
-        "spencer" => "https://youtube.com/live/ZXHvLoKte-E",
-        "ritchie" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcC7MLtZsgo8zmw3ibySugi",
-        "turing" => "https://youtube.com/live/nFcR4bpoDgY",
-        "brattain" => "https://youtube.com/live/A9Ub3_RHDSk",
-        //League Tournaments
-        "feynman" => "https://youtube.com/live/ZTbUW9LGbyE",
-        "feynman-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldy1dJOnpY0PkgZvi5bicWb",
-        "pasteur" => "https://youtube.com/live/G4AB_A9n1Ls",
-        "pasteur-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcr5ChZIozJH0o2jDUnFZCX",
-        "wu" => "https://youtube.com/live/h6wvIfAQdYA",
-        "wu-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUldTWZN1JY-eFgWdUzhLP-mP",
-        "tesla" => "https://youtube.com/live/4_H0Xhz3T10",
-        "tesla-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlfJY0O2uVBTrOaZpv7gdzqk",
-        "hawking" => "https://youtube.com/live/ypZQyM435qE",
-        "hawking-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUlcKmhJUSjLWUUdGA3AwqXEe",
-        "watt" => "https://youtube.com/live/8lqLxOWAmvQ",
-        "watt-playlist" => "https://www.youtube.com/playlist?list=PLoRnKfyWNUle5hcH47CXE1ELo-ICL6sWJ",
-        //Super Qualifiers
-        "asimov" => "https://youtube.com/live/c0wFbhRlusE",
-        "capek" => "https://youtube.com/live/uQlvwiwokMo",
-        //State
-        "state" => "https://youtube.com/live/nKypRFORACw",
-        "fll" => "https://youtube.com/live/rBvjxLnDriw",
-        //Offseasons
-        "wti" => "https://youtube.com/live/WEQIpW0cqko",
-        "hdi" => "https://youtube.com/live/mft5SflznDA",
-
-        "cmp" => "https://www.firstinspires.org/programs/first-championship/watch#:~:text=FIRST%C2%AE%20Tech%20Challenge",
+    "2024" => phf_map! {
+        "bardeen" => "https://www.youtube.com/watch?v=AfZ_z4BQZuk",
+        "bardeen1" => "https://www.youtube.com/watch?v=W7ZDLTJKp5c",
+        "salk" => "https://www.youtube.com/watch?v=yPoC3pbuk9o",
+        "salk1" => "https://www.youtube.com/watch?v=yyXZ8Q5Va2E",
+        "maxwell" => "https://www.youtube.com/watch?v=aj2QMS5zFaM",
+        "maxwell1" => "https://www.youtube.com/watch?v=EnBG9x9p658",
+        "turing" => "https://www.youtube.com/watch?v=HAAQTXrOZw4",
+        "turing1" => "https://www.youtube.com/watch?v=U85i6WwwAJA",
+        "knuth" => "https://www.youtube.com/watch?v=10XjXGPzAyE",
+        "spencer" => "https://www.youtube.com/watch?v=zHW5F4EthHU",
+        "spencer1" => "https://www.youtube.com/watch?v=oLkX1fAEXF4",
+        "brattain" => "https://www.youtube.com/watch?v=pm6gNIm4dnU",
+        "brattain1" => "https://www.youtube.com/watch?v=dFUwrtv--G4",
+        "ritchie1" => "https://www.youtube.com/watch?v=LSgT-zcOUyo",
+        "feynman" => "https://youtube.com/live/2QSo1Zb2Xo4",
+        "tesla" => "https://youtube.com/live/3ppW3ZNnmDA?",
+        "hawking" => "https://youtube.com/live/Me98sMD5KBs",
+        "pasteur" => "https://youtube.com/live/pzwmqGg6mT4",
+        "watt" => "https://youtube.com/live/UkmZnJgWUFA",
+        "state" => "https://www.youtube.com/watch?v=xq-7jn_oMpU",
+        "wyoming" => "https://youtube.com/live/-_atRRrqvxI",
     },
 };
 
@@ -215,24 +220,29 @@ macro_rules! generate_links {
     };
 }
 
+const BIOBUZZ_INDEX: &str = generate_links!(
+    "FTC Washington BIOBUZZ Streams",
+    ("League Meet 1 - In Progress", "/biobuzz/lm1")
+    // ("League Meet 2 - Events Finished. Recording found here", "/decode/lm2"),
+    // ("League Tournaments - In Progress", "/decode/lt"),
+    // ("Super Qualifiers - Coming Soon", "/decode/sq"),
+    // ("Washington State Championship - Coming Soon", "/decode/state")
+);
+
 pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
-    "2024" => generate_links!(
-        "Centerstage - 2023/24",
-        ("Bardeen", "/2024/bardeen"),
-        ("Salk", "/2024/salk"),
-        ("Maxwell", "/2024/maxwell"),
-        ("Turing", "/2024/turing"),
-        ("Knuth", "/2024/knuth"),
-        ("Spencer", "/2024/spencer"),
-        ("Brattain", "/2024/brattain"),
-        ("Ritchie", "/2024/ritchie"),
-        ("Feynman", "/2024/feynman"),
-        ("Tesla", "/2024/tesla"),
-        ("Hawking", "/2024/hawking"),
-        ("Pasteur", "/2024/pasteur"),
-        ("Watt", "/2024/watt"),
-        ("Washington State Championship", "/2024/state"),
-        ("Wyoming State Championship", "/2024/wyoming")
+    "2027" => BIOBUZZ_INDEX,
+    "biobuzz" => BIOBUZZ_INDEX,
+    "biobuzz/lm1" => generate_links!(
+        "FTC Washington BIOBUZZ Streams - League Meet 1",
+        ("Richie League Meet 1", "/2027/ritchie-lm1")
+    ),
+    "2026" => generate_links!(
+        "FTC Washington Decode Streams",
+        ("League Meet 1 - Events Finished. Recording found here", "/decode/lm1"),
+        ("League Meet 2 - Events Finished. Recording found here", "/decode/lm2"),
+        ("League Tournaments - In Progress", "/decode/lt"),
+        ("Super Qualifiers - Coming Soon", "/decode/sq"),
+        ("Washington State Championship - Coming Soon", "/decode/state")
     ),
     "2025" => generate_links!(
         "Into The Deep - 2024/25",
@@ -257,13 +267,23 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Washington State Championship", "itd/wa/state"),
         ("Chicago Robotics Invitiational", "itd/cri")
     ),
-    "2026" => generate_links!(
-        "FTC Washington Decode Streams",
-        ("League Meet 1 - Events Finished. Recording found here", "/decode/lm1"),
-        ("League Meet 2 - Events Finished. Recording found here", "/decode/lm2"),
-        ("League Tournaments - In Progress", "/decode/lt"),
-        ("Super Qualifiers - Coming Soon", "/decode/sq"),
-        ("Washington State Championship - Coming Soon", "/decode/state")
+    "2024" => generate_links!(
+        "Centerstage - 2023/24",
+        ("Bardeen", "/2024/bardeen"),
+        ("Salk", "/2024/salk"),
+        ("Maxwell", "/2024/maxwell"),
+        ("Turing", "/2024/turing"),
+        ("Knuth", "/2024/knuth"),
+        ("Spencer", "/2024/spencer"),
+        ("Brattain", "/2024/brattain"),
+        ("Ritchie", "/2024/ritchie"),
+        ("Feynman", "/2024/feynman"),
+        ("Tesla", "/2024/tesla"),
+        ("Hawking", "/2024/hawking"),
+        ("Pasteur", "/2024/pasteur"),
+        ("Watt", "/2024/watt"),
+        ("Washington State Championship", "/2024/state"),
+        ("Wyoming State Championship", "/2024/wyoming")
     ),
     // Copy of "2026"
     "decode" => generate_links!(
