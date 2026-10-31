@@ -10,6 +10,15 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         // Week 1
         "ritchie-lm1" => "https://www.youtube.com/live/DH8gT_3iDLo",
         "ritchie" => "https://www.youtube.com/live/DH8gT_3iDLo",
+        // Week 2
+        "bardeen-lm1" => "https://www.youtube.com/live/1h77FVxAbQQ",
+        "bardeen" => "https://www.youtube.com/live/1h77FVxAbQQ",
+        "salk-lm1" => "https://www.youtube.com/live/7VF5ax17flg",
+        "salk" => "https://www.youtube.com/live/7VF5ax17flg",
+        "spencer-lm1" => "https://www.youtube.com/live/fUYoetycsPY",
+        "spencer" => "https://www.youtube.com/live/fUYoetycsPY",
+        "turing-lm1" => "https://www.youtube.com/live/HPoPieGB7_k",
+        "turing" => "https://www.youtube.com/live/HPoPieGB7_k",
     },
     "2026" => phf_map! {
         //Weekend 1
@@ -234,7 +243,11 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
     "biobuzz" => BIOBUZZ_INDEX,
     "biobuzz/lm1" => generate_links!(
         "FTC Washington BIOBUZZ Streams - League Meet 1",
-        ("Richie League Meet 1", "/2027/ritchie-lm1")
+        ("Richie League Meet 1", "/2027/ritchie-lm1"),
+        ("Bardeen League Meet 1", "/2027/bardeen-lm1"),
+        ("Salk League Meet 1", "/2027/salk-lm1"),
+        ("Spencer League Meet 1", "/2027/spencer-lm1"),
+        ("Turing League Meet 1", "/2027/turing-lm1")
     ),
     "2026" => generate_links!(
         "FTC Washington Decode Streams",

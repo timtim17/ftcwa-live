@@ -16,7 +16,7 @@ fn index() -> RawHtml<&'static str> {
         generate_links!(@boilerplate),
         "<h1> Welcome to the FTCWA.live project!</h1>",
         "<h3> Generic Usage: https://ftcwa.live/(event name) </h3>",
-        "<h2> Current FTC (BIOBUZZ) season: <a style=\"color:green;\" href=\"biobuzz\">BIOBUZZ</a></h2>",
+        "<h2> Current FTC season: <a style=\"color:green;\" href=\"biobuzz\">BIOBUZZ</a></h2>",
         "<h2> Past FTC seasons: ",
         "<a href=\"decode\">DECODE</a>",
         " | ",
