@@ -236,8 +236,8 @@ macro_rules! generate_links {
 
 const BIOBUZZ_INDEX: &str = generate_links!(
     "FTC Washington BIOBUZZ Streams",
-    ("League Meet 1 - In Progress", "/biobuzz/lm1")
-    ("League Meet 2 - In Progress", "/biobuzz/lm2"),
+    ("League Meet 1 - In Progress", "/biobuzz/lm1"),
+    ("League Meet 2 - In Progress", "/biobuzz/lm2")
     // ("League Tournaments - In Progress", "/decode/lt"),
     // ("Super Qualifiers - Coming Soon", "/decode/sq"),
     // ("Washington State Championship - Coming Soon", "/decode/state")
