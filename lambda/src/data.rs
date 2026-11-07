@@ -19,6 +19,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "spencer" => "https://www.youtube.com/live/fUYoetycsPY",
         "turing-lm1" => "https://www.youtube.com/live/HPoPieGB7_k",
         "turing" => "https://www.youtube.com/live/HPoPieGB7_k",
+        "agnesi-lm1" => "https://www.youtube.com/live/fRfwhG-Eei0",
+        "agnesi" => "https://www.youtube.com/live/fRfwhG-Eei0",
         // Week 3
         "lamarr-lm1" => "https://www.youtube.com/live/sTIfwAaLPzk",
         "lamarr" => "https://www.youtube.com/live/sTIfwAaLPzk",
@@ -251,6 +253,7 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Richie League Meet 1", "/2027/ritchie-lm1"),
         ("Bardeen League Meet 1", "/2027/bardeen-lm1"),
         ("Salk League Meet 1", "/2027/salk-lm1"),
+        ("Agnesi League Meet 1", "/2027/agnesi-lm1"),
         ("Spencer League Meet 1", "/2027/spencer-lm1"),
         ("Turing League Meet 1", "/2027/turing-lm1"),
         ("Lamarr League Meet 1", "/2027/lamarr-lm1")
