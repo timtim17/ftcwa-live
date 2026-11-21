@@ -20,7 +20,7 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "turing-lm1" => "https://www.youtube.com/live/HPoPieGB7_k",
         // "turing" => "https://www.youtube.com/live/HPoPieGB7_k",
         "agnesi-lm1" => "https://www.youtube.com/live/fRfwhG-Eei0",
-        "agnesi" => "https://www.youtube.com/live/fRfwhG-Eei0",
+        // "agnesi" => "https://www.youtube.com/live/fRfwhG-Eei0",
         // Week 3
         "lamarr-lm1" => "https://www.youtube.com/live/sTIfwAaLPzk",
         // "lamarr" => "https://www.youtube.com/live/sTIfwAaLPzk",
@@ -38,6 +38,8 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "lamarr" => "https://www.youtube.com/live/Ga-jeXiW2SM",
         "turing-lm2" => "https://www.youtube.com/live/dZFoU0z7dzk",
         "turing" => "https://www.youtube.com/live/dZFoU0z7dzk",
+        "agnesi-lm2" => "https://www.youtube.com/live/YhJlISBYhHU",
+        "agnesi" => "https://www.youtube.com/live/YhJlISBYhHU",
     },
     "2026" => phf_map! {
         //Weekend 1
@@ -277,7 +279,8 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         ("Spencer League Meet 2", "/2027/spencer-lm2"),
         ("Bardeen League Meet 2", "/2027/bardeen-lm2"),
         ("Lamarr League Meet 2", "/2027/lamarr-lm2"),
-        ("Turing League Meet 2", "/2027/turing-lm2")
+        ("Turing League Meet 2", "/2027/turing-lm2"),
+        ("Agnesi League Meet 2", "/2027/agnesi-lm2")
     ),
     "2026" => generate_links!(
         "FTC Washington Decode Streams",
