@@ -12,18 +12,18 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         // "ritchie" => "https://www.youtube.com/live/DH8gT_3iDLo",
         // Week 2
         "bardeen-lm1" => "https://www.youtube.com/live/1h77FVxAbQQ",
-        "bardeen" => "https://www.youtube.com/live/1h77FVxAbQQ",
+        // "bardeen" => "https://www.youtube.com/live/1h77FVxAbQQ",
         "salk-lm1" => "https://www.youtube.com/live/7VF5ax17flg",
         // "salk" => "https://www.youtube.com/live/7VF5ax17flg",
         "spencer-lm1" => "https://www.youtube.com/live/fUYoetycsPY",
         // "spencer" => "https://www.youtube.com/live/fUYoetycsPY",
         "turing-lm1" => "https://www.youtube.com/live/HPoPieGB7_k",
-        "turing" => "https://www.youtube.com/live/HPoPieGB7_k",
+        // "turing" => "https://www.youtube.com/live/HPoPieGB7_k",
         "agnesi-lm1" => "https://www.youtube.com/live/fRfwhG-Eei0",
         "agnesi" => "https://www.youtube.com/live/fRfwhG-Eei0",
         // Week 3
         "lamarr-lm1" => "https://www.youtube.com/live/sTIfwAaLPzk",
-        "lamarr" => "https://www.youtube.com/live/sTIfwAaLPzk",
+        // "lamarr" => "https://www.youtube.com/live/sTIfwAaLPzk",
         "ritchie-lm2" => "https://www.youtube.com/live/3BVN2x1HPK0",
         "ritchie" => "https://www.youtube.com/live/3BVN2x1HPK0",
         // Week 4
@@ -31,6 +31,13 @@ pub const ALL_STREAMS: phf::Map<&'static str, phf::Map<&'static str, &'static st
         "salk" => "https://www.youtube.com/live/lhWI_cLm5gI",
         "spencer-lm2" => "https://www.youtube.com/live/X9Ar5MeRRCg",
         "spencer" => "https://www.youtube.com/live/X9Ar5MeRRCg",
+        // Week 5
+        "bardeen-lm2" => "https://www.youtube.com/live/DiCj1ak2Lvw",
+        "bardeen" => "https://www.youtube.com/live/DiCj1ak2Lvw",
+        "lamarr-lm2" => "https://www.youtube.com/live/Ga-jeXiW2SM",
+        "lamarr" => "https://www.youtube.com/live/Ga-jeXiW2SM",
+        "turing-lm2" => "https://www.youtube.com/live/dZFoU0z7dzk",
+        "turing" => "https://www.youtube.com/live/dZFoU0z7dzk",
     },
     "2026" => phf_map! {
         //Weekend 1
@@ -267,7 +274,10 @@ pub const STATIC_PAGES: phf::Map<&'static str, &'static str> = phf_map! {
         "FTC Washington BIOBUZZ Streams - League Meet 2",
         ("Richie League Meet 2", "/2027/ritchie-lm2"),
         ("Salk League Meet 2", "/2027/salk-lm2"),
-        ("Spencer League Meet 2", "/2027/spencer-lm2")
+        ("Spencer League Meet 2", "/2027/spencer-lm2"),
+        ("Bardeen League Meet 2", "/2027/bardeen-lm2"),
+        ("Lamarr League Meet 2", "/2027/lamarr-lm2"),
+        ("Turing League Meet 2", "/2027/turing-lm2")
     ),
     "2026" => generate_links!(
         "FTC Washington Decode Streams",
